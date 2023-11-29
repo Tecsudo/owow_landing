@@ -16,8 +16,6 @@ class _SectionTwoState extends State<SectionTwo> {
 
   @override
   Widget build(BuildContext context) {
-    log('ImagePath: ${Config.imagePath}');
-
     return SizedBox(
       width: screenSize.width,
       height: screenSize.height * 3.2,
