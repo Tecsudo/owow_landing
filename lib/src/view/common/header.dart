@@ -13,7 +13,7 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: UIConfig.screenSize.height * 0.2,
+      height: Config.screenSize.height * 0.2,
     );
   }
 }

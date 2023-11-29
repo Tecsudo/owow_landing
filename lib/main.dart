@@ -6,6 +6,15 @@ import 'core/config/theme/theme.dart';
 import 'src/view/home/home_main.dart';
 
 void main() {
+  const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
+  if (kReleaseMode) {
+    Config.imagePath = 'assets/assets/images';
+    // Config.workingFontPath = Config.prodFontPath;
+  } else {
+    Config.imagePath = 'assets/images';
+    // Config.workingFontPath = Config.devFontPath;
+  }
+
   runApp(const MyApp());
 }
 
@@ -14,7 +23,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    UIConfig.screenSize = MediaQuery.of(context).size;
+    Config.screenSize = MediaQuery.of(context).size;
 
     return MaterialApp(
       title: 'O WOW!',

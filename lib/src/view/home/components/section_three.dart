@@ -11,7 +11,7 @@ class SectionThree extends StatefulWidget {
 }
 
 class _SectionThreeState extends State<SectionThree> {
-  Size screenSize = UIConfig.screenSize;
+  Size screenSize = Config.screenSize;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,9 @@ class _SectionThreeState extends State<SectionThree> {
           Container(
             width: screenSize.width,
             height: screenSize.height * 1.1,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/end.png'),
+                image: AssetImage(' ${Config.imagePath}/end.png'),
                 fit: BoxFit.fill,
               ),
             ),

@@ -11,7 +11,7 @@ class SectionOne extends StatefulWidget {
 }
 
 class _SectionOneState extends State<SectionOne> {
-  Size screenSize = UIConfig.screenSize;
+  Size screenSize = Config.screenSize;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,9 @@ class _SectionOneState extends State<SectionOne> {
           Container(
             width: screenSize.width,
             height: screenSize.height * 1.2,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/assets/images/top.png'),
+                image: AssetImage('${Config.imagePath}/top.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -178,9 +178,9 @@ class _SectionOneState extends State<SectionOne> {
                 Container(
                   width: screenSize.width * .5,
                   height: screenSize.height * .8,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/images/top_one.png'),
+                      image: AssetImage('${Config.imagePath}/top_one.png'),
                       fit: BoxFit.contain,
                     ),
                   ),

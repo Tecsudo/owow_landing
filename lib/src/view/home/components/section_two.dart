@@ -10,7 +10,7 @@ class SectionTwo extends StatefulWidget {
 }
 
 class _SectionTwoState extends State<SectionTwo> {
-  Size screenSize = UIConfig.screenSize;
+  Size screenSize = Config.screenSize;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,9 @@ class _SectionTwoState extends State<SectionTwo> {
             child: Container(
               width: screenSize.width,
               height: screenSize.height * 2.5,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/mid.png'),
+                  image: AssetImage(' ${Config.imagePath}/mid.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -184,12 +184,12 @@ class MidContentShapes extends StatelessWidget {
               children: [
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'assets/images/mid_two.png',
+                  iconPath: ' ${Config.imagePath}/mid_two.png',
                   text: 'Delivery',
                 ),
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'assets/images/mid_three.png',
+                  iconPath: ' ${Config.imagePath}/mid_three.png',
                   text: 'Pizza',
                 ),
               ],
@@ -201,12 +201,12 @@ class MidContentShapes extends StatelessWidget {
               children: [
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'assets/images/mid_one.png',
+                  iconPath: ' ${Config.imagePath}/mid_one.png',
                   text: 'Burger',
                 ),
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'assets/images/mid_four.png',
+                  iconPath: ' ${Config.imagePath}/mid_four.png',
                   text: 'Snacks',
                 ),
               ],

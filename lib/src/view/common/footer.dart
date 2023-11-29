@@ -10,7 +10,7 @@ class Footer extends StatefulWidget {
 }
 
 class _FooterState extends State<Footer> {
-  Size screenSize = UIConfig.screenSize;
+  Size screenSize = Config.screenSize;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
