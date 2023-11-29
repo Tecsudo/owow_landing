@@ -25,7 +25,7 @@ class _SectionThreeState extends State<SectionThree> {
             height: screenSize.height * 1.1,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/end.png'),
+                image: AssetImage('assets/images/end.png'),
                 fit: BoxFit.fill,
               ),
             ),

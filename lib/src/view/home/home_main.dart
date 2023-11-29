@@ -14,12 +14,14 @@ class HomeMain extends StatefulWidget {
 class _HomeMainState extends State<HomeMain> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: const [
-        SectionOne(),
-        SectionTwo(),
-        SectionThree(),
-      ],
+    return Scaffold(
+      body: ListView(
+        children: const [
+          SectionOne(),
+          SectionTwo(),
+          SectionThree(),
+        ],
+      ),
     );
   }
 }

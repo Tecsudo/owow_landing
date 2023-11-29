@@ -26,114 +26,136 @@ class _SectionTwoState extends State<SectionTwo> {
               height: screenSize.height * 2.5,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/mid.png'),
+                  image: AssetImage('assets/images/mid.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-          SizedBox(
-            width: screenSize.width,
-            height: screenSize.height * 1,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 501,
-                      height: 67,
-                      child: Text(
-                        'Lorem Ipsum is simply ',
+          MidPartOne(screenSize: screenSize),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Flexible(
+              child: Column(
+                children: [],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MidPartOne extends StatelessWidget {
+  const MidPartOne({
+    super.key,
+    required this.screenSize,
+  });
+
+  final Size screenSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: screenSize.width,
+      height: screenSize.height * 1,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 501,
+                height: 67,
+                child: Text(
+                  'Lorem Ipsum is simply ',
+                  style: TextStyle(
+                    color: Color(0xFFFF8E49),
+                    fontSize: 40,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                    letterSpacing: -0.61,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 543,
+                height: 182.41,
+                child: Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'O',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 128,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
+                      ),
+                      TextSpan(
+                        text: ' W',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 64,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'O',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 96,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'W !',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 128,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 534,
+                height: 230.16,
+                child: Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text:
+                            ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
                         style: TextStyle(
                           color: Color(0xFFFF8E49),
-                          fontSize: 40,
+                          fontSize: 24,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w700,
                           height: 0,
                           letterSpacing: -0.61,
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 543,
-                      height: 182.41,
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'O',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 128,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: ' W',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 64,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'O',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 96,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'W !',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 128,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 534,
-                      height: 230.16,
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text:
-                                  ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
-                              style: TextStyle(
-                                color: Color(0xFFFF8E49),
-                                fontSize: 24,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                                height: 0,
-                                letterSpacing: -0.61,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-                MidContentShapes(screenSize: screenSize),
-              ],
-            ),
-          )
+              ),
+            ],
+          ),
+          MidContentShapes(screenSize: screenSize),
         ],
       ),
     );
@@ -162,12 +184,12 @@ class MidContentShapes extends StatelessWidget {
               children: [
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'images/mid_two.png',
+                  iconPath: 'assets/images/mid_two.png',
                   text: 'Delivery',
                 ),
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'images/mid_three.png',
+                  iconPath: 'assets/images/mid_three.png',
                   text: 'Pizza',
                 ),
               ],
@@ -179,12 +201,12 @@ class MidContentShapes extends StatelessWidget {
               children: [
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'images/mid_one.png',
+                  iconPath: 'assets/images/mid_one.png',
                   text: 'Burger',
                 ),
                 MidShadowBox(
                   screenSize: screenSize,
-                  iconPath: 'images/mid_four.png',
+                  iconPath: 'assets/images/mid_four.png',
                   text: 'Snacks',
                 ),
               ],

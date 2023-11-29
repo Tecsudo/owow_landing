@@ -25,7 +25,7 @@ class _SectionOneState extends State<SectionOne> {
             height: screenSize.height * 1.2,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/top.png'),
+                image: AssetImage('assets/images/top.png'),
                 fit: BoxFit.fill,
               ),
             ),
@@ -180,7 +180,7 @@ class _SectionOneState extends State<SectionOne> {
                   height: screenSize.height * .8,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/top_one.png'),
+                      image: AssetImage('assets/images/top_one.png'),
                       fit: BoxFit.contain,
                     ),
                   ),
