@@ -6,8 +6,8 @@ import 'core/config/theme/theme.dart';
 import 'src/view/home/home_main.dart';
 
 void main() {
-  const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
-  if (kReleaseMode) {
+  // const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
+  if (Config.releaseMode) {
     Config.imagePath = 'assets/assets/images';
     // Config.workingFontPath = Config.prodFontPath;
   } else {
