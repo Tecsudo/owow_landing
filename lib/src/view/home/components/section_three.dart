@@ -25,7 +25,7 @@ class _SectionThreeState extends State<SectionThree> {
             height: screenSize.height * 1.1,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(' ${Config.imagePath}/end.png'),
+                image: AssetImage('${Config.imagePath}/end.png'),
                 fit: BoxFit.fill,
               ),
             ),
