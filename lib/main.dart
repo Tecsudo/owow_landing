@@ -12,7 +12,7 @@ void main() {
   log('kReleaseMode: $kReleaseMode');
   Config.releaseMode = kReleaseMode;
   if (kReleaseMode) {
-    Config.imagePath = 'assets/assets/images';
+    Config.imagePath = 'assets/assets/assets/images';
     // Config.workingFontPath = Config.prodFontPath;
   } else {
     Config.imagePath = 'assets/images';
