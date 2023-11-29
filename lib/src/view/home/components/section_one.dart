@@ -90,13 +90,13 @@ class _SectionOneState extends State<SectionOne> {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 534,
                       height: 230.16,
                       child: Text.rich(
                         TextSpan(
                           children: [
-                            TextSpan(
+                            const TextSpan(
                               text: 'Lorem Ipsum is simply \n',
                               style: TextStyle(
                                 color: Colors.white,
@@ -108,6 +108,9 @@ class _SectionOneState extends State<SectionOne> {
                               ),
                             ),
                             TextSpan(
+                              text: 'ImagePath: ${Config.imagePath}',
+                            ),
+                            const TextSpan(
                               text:
                                   ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
                               style: TextStyle(

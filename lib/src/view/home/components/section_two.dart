@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/ui_constant.dart';
@@ -14,6 +16,8 @@ class _SectionTwoState extends State<SectionTwo> {
 
   @override
   Widget build(BuildContext context) {
+    log('ImagePath: ${Config.imagePath}');
+
     return SizedBox(
       width: screenSize.width,
       height: screenSize.height * 3.2,

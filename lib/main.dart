@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:owow/core/constant/ui_constant.dart';
@@ -6,8 +8,10 @@ import 'core/config/theme/theme.dart';
 import 'src/view/home/home_main.dart';
 
 void main() {
-  // const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
-  if (Config.releaseMode) {
+  const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
+  log('kReleaseMode: $kReleaseMode');
+  Config.releaseMode = kReleaseMode;
+  if (kReleaseMode) {
     Config.imagePath = 'assets/assets/images';
     // Config.workingFontPath = Config.prodFontPath;
   } else {
