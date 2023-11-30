@@ -18,7 +18,7 @@ class _SectionTwoState extends State<SectionTwo> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: screenSize.width,
-      height: screenSize.height * 3.2,
+      height: screenSize.height * 3,
       child: Stack(
         children: [
           Align(
