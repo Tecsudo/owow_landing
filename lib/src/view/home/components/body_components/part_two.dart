@@ -153,23 +153,6 @@ class MidPartTwoContentBox extends StatelessWidget {
               ),
             ),
           ),
-          // Positioned(
-          //   left: 95,
-          //   top: 40,
-          //   child: SizedBox(
-          //     width: screenSize.width * .14,
-          //     child: Text(
-          //       text,
-          //       textAlign: TextAlign.right,
-          //       style: const TextStyle(
-          //         color: Colors.white,
-          //         fontSize: 30,
-          //         fontFamily: 'Poppins',
-          //         fontWeight: FontWeight.w700,
-          //       ),
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
