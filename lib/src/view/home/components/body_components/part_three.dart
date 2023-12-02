@@ -14,6 +14,7 @@ class MidPartThree extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(
           right: screenSize.width * .03,
+          bottom: screenSize.height * 0.7,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -71,7 +72,7 @@ class MidPartThree extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: screenSize.height * .25,
+                      height: screenSize.height * .22,
                     ),
                     EndContentShapes(
                       screenSize: screenSize,
@@ -138,7 +139,7 @@ class EndContentShapes extends StatelessWidget {
           ],
         ),
         child: Container(
-          margin: const EdgeInsets.all(20),
+          margin: const EdgeInsets.all(10),
           width: screenSize.width * .19,
           height: screenSize.height * .45,
           child: Align(
@@ -148,7 +149,7 @@ class EndContentShapes extends StatelessWidget {
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 32,
+                fontSize: 30,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w600,
               ),

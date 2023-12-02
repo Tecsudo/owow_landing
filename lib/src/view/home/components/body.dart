@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/ui_constant.dart';
+import 'body_components/part_four.dart';
 import 'body_components/part_one.dart';
 import 'body_components/part_three.dart';
 import 'body_components/part_two.dart';
@@ -19,7 +20,7 @@ class _PageBodyState extends State<PageBody> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: screenSize.width,
-      height: screenSize.height * 3.5,
+      height: screenSize.height * 4,
       child: Stack(
         children: [
           Align(
@@ -38,6 +39,7 @@ class _PageBodyState extends State<PageBody> {
           MidPartOne(screenSize: screenSize),
           MidPartTwo(screenSize: screenSize),
           MidPartThree(screenSize: screenSize),
+          MidPartFour(screenSize: screenSize),
         ],
       ),
     );

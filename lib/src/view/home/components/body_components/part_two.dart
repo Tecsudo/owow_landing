@@ -15,6 +15,7 @@ class MidPartTwo extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(
             top: screenSize.height * .2,
+            bottom: screenSize.height * 0.5,
           ),
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: screenSize.width * .01),

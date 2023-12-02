@@ -15,12 +15,16 @@ class _HomeMainState extends State<HomeMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: const [
-          PageStart(),
-          PageBody(),
-          PageEnding(),
-        ],
+      body: Expanded(
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          children: const [
+            PageStart(),
+            PageBody(),
+            PageEnding(),
+          ],
+        ),
       ),
     );
   }
