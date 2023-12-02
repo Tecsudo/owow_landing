@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/ui_constant.dart';
-import 'section_two_components/part_one.dart';
-import 'section_two_components/part_three.dart';
-import 'section_two_components/part_two.dart';
+import 'body_components/part_one.dart';
+import 'body_components/part_three.dart';
+import 'body_components/part_two.dart';
 
-class SectionTwo extends StatefulWidget {
-  const SectionTwo({super.key});
+class PageBody extends StatefulWidget {
+  const PageBody({super.key});
 
   @override
-  State<SectionTwo> createState() => _SectionTwoState();
+  State<PageBody> createState() => _PageBodyState();
 }
 
-class _SectionTwoState extends State<SectionTwo> {
+class _PageBodyState extends State<PageBody> {
   Size screenSize = Config.screenSize;
 
   @override
