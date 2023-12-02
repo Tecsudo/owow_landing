@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:owow/core/constant/ui_constant.dart';
 
@@ -29,15 +30,15 @@ class MyApp extends StatelessWidget {
     Config.screenSize = MediaQuery.of(context).size;
 
     return MaterialApp(
-      title: 'O WOW!',
-      // scrollBehavior: const MaterialScrollBehavior().copyWith(
-      //   dragDevices: {
-      //     PointerDeviceKind.mouse,
-      //     PointerDeviceKind.touch,
-      //     PointerDeviceKind.stylus,
-      //     PointerDeviceKind.unknown
-      //   },
-      // ),
+      title: 'O wOW!',
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown
+        },
+      ),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

@@ -65,108 +65,111 @@ class MidPartTwo extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: screenSize.height * .7,
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: 501,
-                              height: 67,
-                              child: Text(
-                                'Lorem Ipsum is simply ',
-                                style: TextStyle(
-                                  color: Color(0xFFFF8E49),
-                                  fontSize: 40,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w700,
-                                  height: 0,
-                                  letterSpacing: -0.61,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 543,
-                              height: 182.41,
-                              child: Text.rich(
-                                TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'O',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 128,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: ' W',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 64,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: 'O',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 96,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: 'W !',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 128,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 534,
-                              height: 230.16,
-                              child: Text.rich(
-                                TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text:
-                                          ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
-                                      style: TextStyle(
-                                        color: Color(0xFFFF8E49),
-                                        fontSize: 24,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w700,
-                                        height: 0,
-                                        letterSpacing: -0.61,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Spacer(),
-                    ],
-                  ),
+                  height: screenSize.height * .4,
                 ),
+                // SizedBox(
+                //   height: screenSize.height * .7,
+                //   child: const Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //     children: [
+                //       Flexible(
+                //         child: Column(
+                //           mainAxisAlignment: MainAxisAlignment.center,
+                //           children: [
+                //             SizedBox(
+                //               width: 501,
+                //               height: 67,
+                //               child: Text(
+                //                 'Lorem Ipsum is simply ',
+                //                 style: TextStyle(
+                //                   color: Color(0xFFFF8E49),
+                //                   fontSize: 40,
+                //                   fontFamily: 'Poppins',
+                //                   fontWeight: FontWeight.w700,
+                //                   height: 0,
+                //                   letterSpacing: -0.61,
+                //                 ),
+                //               ),
+                //             ),
+                //             SizedBox(
+                //               width: 543,
+                //               height: 182.41,
+                //               child: Text.rich(
+                //                 TextSpan(
+                //                   children: [
+                //                     TextSpan(
+                //                       text: 'O',
+                //                       style: TextStyle(
+                //                         color: Colors.black,
+                //                         fontSize: 128,
+                //                         fontFamily: 'Poppins',
+                //                         fontWeight: FontWeight.w600,
+                //                         height: 0,
+                //                       ),
+                //                     ),
+                //                     TextSpan(
+                //                       text: ' W',
+                //                       style: TextStyle(
+                //                         color: Colors.black,
+                //                         fontSize: 64,
+                //                         fontFamily: 'Poppins',
+                //                         fontWeight: FontWeight.w600,
+                //                         height: 0,
+                //                       ),
+                //                     ),
+                //                     TextSpan(
+                //                       text: 'O',
+                //                       style: TextStyle(
+                //                         color: Colors.black,
+                //                         fontSize: 96,
+                //                         fontFamily: 'Poppins',
+                //                         fontWeight: FontWeight.w600,
+                //                         height: 0,
+                //                       ),
+                //                     ),
+                //                     TextSpan(
+                //                       text: 'W !',
+                //                       style: TextStyle(
+                //                         color: Colors.black,
+                //                         fontSize: 128,
+                //                         fontFamily: 'Poppins',
+                //                         fontWeight: FontWeight.w600,
+                //                         height: 0,
+                //                       ),
+                //                     ),
+                //                   ],
+                //                 ),
+                //               ),
+                //             ),
+                //             SizedBox(
+                //               width: 534,
+                //               height: 230.16,
+                //               child: Text.rich(
+                //                 TextSpan(
+                //                   children: [
+                //                     TextSpan(
+                //                       text:
+                //                           ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
+                //                       style: TextStyle(
+                //                         color: Color(0xFFFF8E49),
+                //                         fontSize: 24,
+                //                         fontFamily: 'Poppins',
+                //                         fontWeight: FontWeight.w700,
+                //                         height: 0,
+                //                         letterSpacing: -0.61,
+                //                       ),
+                //                     ),
+                //                   ],
+                //                 ),
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //       Spacer(),
+                //     ],
+                //   ),
+                // ),
                 SizedBox(
                   width: screenSize.width,
                   height: screenSize.height * .8,
@@ -175,7 +178,7 @@ class MidPartTwo extends StatelessWidget {
                     children: [
                       MidPartTwoContentBox(
                         screenSize: screenSize,
-                        text: 'text of the\nprinting and\ntypesetting',
+                        text: 'Customer’s Feedback',
                         gradientColors: const [
                           Color(0xFF4074BA),
                           Color(0xFF5EA3D9)
@@ -183,7 +186,7 @@ class MidPartTwo extends StatelessWidget {
                       ),
                       MidPartTwoContentBox(
                         screenSize: screenSize,
-                        text: 'text of the\nprinting and\ntypesetting',
+                        text: 'Customer’s behavior and Choices',
                         gradientColors: const [
                           Color(0xFFD33D54),
                           Color(0xFFDB6777)
@@ -191,7 +194,7 @@ class MidPartTwo extends StatelessWidget {
                       ),
                       MidPartTwoContentBox(
                         screenSize: screenSize,
-                        text: 'text of the\nprinting and\ntypesetting',
+                        text: 'Trends and Statistics',
                         gradientColors: const [
                           Color(0xFFED7B23),
                           Color(0xFFF4AE2C)
@@ -199,7 +202,7 @@ class MidPartTwo extends StatelessWidget {
                       ),
                       MidPartTwoContentBox(
                         screenSize: screenSize,
-                        text: 'text of the\nprinting and\ntypesetting',
+                        text: 'Social and Organic Growth',
                         gradientColors: const [
                           Color(0xFF0AB89D),
                           Color(0xFF3DC0B5)
@@ -285,20 +288,17 @@ class MidPartTwoContentBox extends StatelessWidget {
           ),
           Positioned(
             left: 95,
-            top: 44.94,
+            top: 40,
             child: SizedBox(
-              width: 181,
-              height: 131.79,
+              width: screenSize.width * .14, // height: 131.79,
               child: Text(
                 text,
                 textAlign: TextAlign.right,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 30,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w700,
-                  height: 0,
-                  letterSpacing: -0.61,
                 ),
               ),
             ),
@@ -377,97 +377,59 @@ class MidPartOne extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 501,
-                height: 67,
-                child: Text(
-                  'Lorem Ipsum is simply ',
-                  style: TextStyle(
-                    color: Color(0xFFFF8E49),
-                    fontSize: 40,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                    letterSpacing: -0.61,
+          const SizedBox(
+            width: 500,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  // height: 67,
+                  child: Text(
+                    '“WE HAVE SOMETHING FOR EVERYONE”',
+                    style: TextStyle(
+                      color: Color(0xFFFF8E49),
+                      fontSize: 36,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 543,
-                height: 182.41,
-                child: Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'O',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 128,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w600,
-                          height: 0,
-                        ),
-                      ),
-                      TextSpan(
-                        text: ' W',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 64,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w600,
-                          height: 0,
-                        ),
-                      ),
-                      TextSpan(
-                        text: 'O',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 96,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w600,
-                          height: 0,
-                        ),
-                      ),
-                      TextSpan(
-                        text: 'W !',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 128,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w600,
-                          height: 0,
-                        ),
-                      ),
-                    ],
+                SizedBox(
+                  // height: 67,
+                  child: Text(
+                    'In Orage color “For You”',
+                    style: TextStyle(
+                      color: Color(0xFFFF8E49),
+                      fontSize: 24,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w500,
+                      height: 0,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 534,
-                height: 230.16,
-                child: Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text:
-                            ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
-                        style: TextStyle(
-                          color: Color(0xFFFF8E49),
-                          fontSize: 24,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          height: 0,
-                          letterSpacing: -0.61,
+                SizedBox(
+                  // height: 230.16,
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text:
+                              '“Hi everyone! At O WOW, our mission is to always act in your best interests. We\'ve got you covered no matter whichever industry or field you belong to. Consider us as your personalized remedy, ready to bridge the gaps and provide you with precisely what you require. What is in our toolkit? To ease your life, we have some fantastic features lined up.”',
+                          style: TextStyle(
+                            color: Color(0xFFFF8E49),
+                            fontSize: 20,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           MidContentShapes(screenSize: screenSize),
         ],
@@ -492,39 +454,35 @@ class MidContentShapes extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Flexible(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                MidShadowBox(
-                  screenSize: screenSize,
-                  iconPath: '${Config.imagePath}/mid_two.png',
-                  text: 'Delivery',
-                ),
-                MidShadowBox(
-                  screenSize: screenSize,
-                  iconPath: '${Config.imagePath}/mid_three.png',
-                  text: 'Pizza',
-                ),
-              ],
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              MidShadowBox(
+                screenSize: screenSize,
+                iconPath: '${Config.imagePath}/mid_two.png',
+                text: 'Revenue Growth',
+              ),
+              MidShadowBox(
+                screenSize: screenSize,
+                iconPath: '${Config.imagePath}/mid_three.png',
+                text: 'Cost Cutting',
+              ),
+            ],
           ),
-          Flexible(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                MidShadowBox(
-                  screenSize: screenSize,
-                  iconPath: '${Config.imagePath}/mid_one.png',
-                  text: 'Burger',
-                ),
-                MidShadowBox(
-                  screenSize: screenSize,
-                  iconPath: '${Config.imagePath}/mid_four.png',
-                  text: 'Snacks',
-                ),
-              ],
-            ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              MidShadowBox(
+                screenSize: screenSize,
+                iconPath: '${Config.imagePath}/mid_one.png',
+                text: 'Better Decision Making',
+              ),
+              MidShadowBox(
+                screenSize: screenSize,
+                iconPath: '${Config.imagePath}/mid_four.png',
+                text: 'Customers Awareness',
+              ),
+            ],
           ),
         ],
       ),
@@ -550,6 +508,7 @@ class MidShadowBox extends StatelessWidget {
     return Container(
       width: screenSize.width * .2,
       height: screenSize.height * .4,
+      padding: EdgeInsets.symmetric(horizontal: screenSize.width * .02),
       decoration: ShapeDecoration(
         color: const Color(0xFFF6F6F6),
         shape: RoundedRectangleBorder(
@@ -565,8 +524,7 @@ class MidShadowBox extends StatelessWidget {
         ],
       ),
       child: Center(
-        child: Flexible(
-            child: Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -575,20 +533,25 @@ class MidShadowBox extends StatelessWidget {
                 width: screenSize.width * .12,
                 child: Image.asset(
                   iconPath,
+                  color: const Color(0xFFFF8E49),
                 )),
+            const SizedBox(
+              height: 10,
+            ),
             Text(
               text,
+              maxLines: 2,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.black,
                 fontSize: 24,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w700,
                 height: 0,
-                letterSpacing: -0.61,
               ),
             ),
           ],
-        )),
+        ),
       ),
     );
   }

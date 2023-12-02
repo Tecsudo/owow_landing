@@ -1,6 +1,8 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/ui_constant.dart';
+import '../../../../core/widget/word_logo.dart';
 import '../../common/header.dart';
 
 class SectionOne extends StatefulWidget {
@@ -39,58 +41,101 @@ class _SectionOneState extends State<SectionOne> {
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      width: 543,
-                      height: 182.41,
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'O',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 128,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: ' W',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 64,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'O',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 96,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'W !',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 128,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    WordLogo(
+                      screenSize: screenSize,
+                      logoColor: Colors.white,
                     ),
+                    SizedBox(
+                        width: 550,
+                        // height: 230.16,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'We are: ',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 36,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
+                                height: 0,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 370.0,
+                              child: DefaultTextStyle(
+                                maxLines: 1,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 42,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w800,
+                                  height: 0,
+                                  letterSpacing: -0.3,
+                                ),
+                                child: AnimatedTextKit(
+                                  isRepeatingAnimation: true,
+                                  animatedTexts: [
+                                    TypewriterAnimatedText(
+                                      'Innovators',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'Dreamers',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'Creators',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'Story Tellers',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        )),
                     const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      width: 250,
+                      height: 50,
+                      child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            surfaceTintColor: Colors.white,
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            shadowColor: Colors.black.withOpacity(.3),
+                            elevation: 4,
+                          ),
+                          onPressed: () {},
+                          icon: const Icon(Icons.arrow_forward_ios_rounded),
+                          label: const Text(
+                            'Continue',
+                            style: TextStyle(
+                              color: Color(0xFFFF9148),
+                              fontSize: 16,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              height: 0,
+                            ),
+                          )),
+                    )
+                    //..........................................................
+                    /* const SizedBox(
                       width: 534,
                       height: 230.16,
                       child: Text.rich(
@@ -122,8 +167,9 @@ class _SectionOneState extends State<SectionOne> {
                           ],
                         ),
                       ),
-                    ),
-                    SizedBox(
+                    ), */
+
+                    /* SizedBox(
                       width: 316,
                       height: 50,
                       child: Stack(
@@ -172,7 +218,8 @@ class _SectionOneState extends State<SectionOne> {
                           ),
                         ],
                       ),
-                    )
+                    ) */
+                    //..........................................................
                   ],
                 ),
                 Container(

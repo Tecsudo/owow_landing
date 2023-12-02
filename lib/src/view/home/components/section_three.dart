@@ -41,101 +41,102 @@ class _SectionThreeState extends State<SectionThree> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: screenSize.height * .3,
-                    ),
-                    const SizedBox(
-                      width: 501,
-                      height: 67,
-                      child: Text(
-                        'Lorem Ipsum is simply ',
-                        style: TextStyle(
-                          color: Color(0xFFFF8E49),
-                          fontSize: 40,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          height: 0,
-                          letterSpacing: -0.61,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 543,
-                      height: 182.41,
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'O',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 128,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: ' W',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 64,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'O',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 96,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'W !',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 128,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 534,
-                      height: 230.16,
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text:
-                                  ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
-                              style: TextStyle(
-                                color: Color(0xFFFF8E49),
-                                fontSize: 24,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                                height: 0,
-                                letterSpacing: -0.61,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                const Spacer(),
+                // Column(
+                //   mainAxisAlignment: MainAxisAlignment.start,
+                //   children: [
+                //     SizedBox(
+                //       height: screenSize.height * .3,
+                //     ),
+                //     const SizedBox(
+                //       width: 501,
+                //       height: 67,
+                //       child: Text(
+                //         'Lorem Ipsum is simply  ',
+                //         style: TextStyle(
+                //           color: Color(0xFFFF8E49),
+                //           fontSize: 40,
+                //           fontFamily: 'Poppins',
+                //           fontWeight: FontWeight.w700,
+                //           height: 0,
+                //           letterSpacing: -0.61,
+                //         ),
+                //       ),
+                //     ),
+                //     const SizedBox(
+                //       width: 543,
+                //       height: 182.41,
+                //       child: Text.rich(
+                //         TextSpan(
+                //           children: [
+                //             TextSpan(
+                //               text: 'O',
+                //               style: TextStyle(
+                //                 color: Colors.black,
+                //                 fontSize: 128,
+                //                 fontFamily: 'Poppins',
+                //                 fontWeight: FontWeight.w600,
+                //                 height: 0,
+                //               ),
+                //             ),
+                //             TextSpan(
+                //               text: ' W',
+                //               style: TextStyle(
+                //                 color: Colors.black,
+                //                 fontSize: 64,
+                //                 fontFamily: 'Poppins',
+                //                 fontWeight: FontWeight.w600,
+                //                 height: 0,
+                //               ),
+                //             ),
+                //             TextSpan(
+                //               text: 'O',
+                //               style: TextStyle(
+                //                 color: Colors.black,
+                //                 fontSize: 96,
+                //                 fontFamily: 'Poppins',
+                //                 fontWeight: FontWeight.w600,
+                //                 height: 0,
+                //               ),
+                //             ),
+                //             TextSpan(
+                //               text: 'W !',
+                //               style: TextStyle(
+                //                 color: Colors.black,
+                //                 fontSize: 128,
+                //                 fontFamily: 'Poppins',
+                //                 fontWeight: FontWeight.w600,
+                //                 height: 0,
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //     const SizedBox(
+                //       width: 534,
+                //       height: 230.16,
+                //       child: Text.rich(
+                //         TextSpan(
+                //           children: [
+                //             TextSpan(
+                //               text:
+                //                   ' \ntext of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
+                //               style: TextStyle(
+                //                 color: Color(0xFFFF8E49),
+                //                 fontSize: 24,
+                //                 fontFamily: 'Poppins',
+                //                 fontWeight: FontWeight.w700,
+                //                 height: 0,
+                //                 letterSpacing: -0.61,
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 SizedBox(
                   height: screenSize.height * 1.5,
                   child: Flexible(
@@ -153,7 +154,7 @@ class _SectionThreeState extends State<SectionThree> {
                     child: Column(
                       children: [
                         SizedBox(
-                          height: screenSize.height * .2,
+                          height: screenSize.height * .25,
                         ),
                         EndContentShapes(screenSize: screenSize),
                         EndContentShapes(screenSize: screenSize),
