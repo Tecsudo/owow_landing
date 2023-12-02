@@ -37,7 +37,7 @@ class _PageBodyState extends State<PageBody> {
           ),
           MidPartOne(screenSize: screenSize),
           MidPartTwo(screenSize: screenSize),
-          MidPartThree(screenSize: screenSize),
+          // MidPartThree(screenSize: screenSize),
         ],
       ),
     );
