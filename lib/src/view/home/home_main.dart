@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'components/section_one.dart';
-import 'components/section_three.dart';
-import 'components/section_two.dart';
+import 'components/top.dart';
+import 'components/end.dart';
+import 'components/body.dart';
 
 class HomeMain extends StatefulWidget {
   const HomeMain({super.key});
@@ -15,12 +15,16 @@ class _HomeMainState extends State<HomeMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: const [
-          SectionOne(),
-          SectionTwo(),
-          SectionThree(),
-        ],
+      body: Expanded(
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          children: const [
+            PageStart(),
+            PageBody(),
+            PageEnding(),
+          ],
+        ),
       ),
     );
   }

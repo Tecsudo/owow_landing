@@ -5,14 +5,14 @@ import '../../../../core/constant/ui_constant.dart';
 import '../../../../core/widget/word_logo.dart';
 import '../../common/header.dart';
 
-class SectionOne extends StatefulWidget {
-  const SectionOne({super.key});
+class PageStart extends StatefulWidget {
+  const PageStart({super.key});
 
   @override
-  State<SectionOne> createState() => _SectionOneState();
+  State<PageStart> createState() => _PageStartState();
 }
 
-class _SectionOneState extends State<SectionOne> {
+class _PageStartState extends State<PageStart> {
   Size screenSize = Config.screenSize;
 
   @override
@@ -32,7 +32,7 @@ class _SectionOneState extends State<SectionOne> {
               ),
             ),
           ),
-          const Align(alignment: Alignment.bottomCenter, child: Header()),
+          const Align(alignment: Alignment.topCenter, child: Header()),
           SizedBox(
             width: screenSize.width,
             height: screenSize.height * 1,
