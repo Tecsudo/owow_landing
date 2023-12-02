@@ -32,7 +32,7 @@ class _PageStartState extends State<PageStart> {
               ),
             ),
           ),
-          const Align(alignment: Alignment.bottomCenter, child: Header()),
+          const Align(alignment: Alignment.topCenter, child: Header()),
           SizedBox(
             width: screenSize.width,
             height: screenSize.height * 1,
