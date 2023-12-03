@@ -5,15 +5,26 @@ import '../../../../core/constant/ui_constant.dart';
 import '../../../../core/widget/word_logo.dart';
 import '../../common/header.dart';
 
-class PageStart extends StatefulWidget {
-  const PageStart({super.key});
+class PageStart extends StatelessWidget {
+  PageStart(
+      {super.key,
+      required this.aboutUsKey,
+      required this.servicesKey,
+      required this.caseStudyKey,
+      required this.contactUsKey,
+      required this.homeKey,
+      required this.careerKey,
+      required this.scrollController,
+      required this.screenSize});
 
-  @override
-  State<PageStart> createState() => _PageStartState();
-}
-
-class _PageStartState extends State<PageStart> {
-  Size screenSize = Config.screenSize;
+  final GlobalKey aboutUsKey;
+  final GlobalKey servicesKey;
+  final GlobalKey caseStudyKey;
+  final GlobalKey contactUsKey;
+  final GlobalKey homeKey;
+  final GlobalKey careerKey;
+  final ScrollController scrollController;
+  final Size screenSize;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +43,18 @@ class _PageStartState extends State<PageStart> {
               ),
             ),
           ),
-          const Align(alignment: Alignment.topCenter, child: Header()),
+          Align(
+              alignment: Alignment.topCenter,
+              child: Header(
+                width: screenSize.width,
+                aboutUsKey: aboutUsKey,
+                servicesKey: servicesKey,
+                contactUsKey: contactUsKey,
+                caseStudyKey: caseStudyKey,
+                homeKey: homeKey,
+                careerKey: careerKey,
+                scrollController: scrollController,
+              )),
           SizedBox(
             width: screenSize.width,
             height: screenSize.height * 1,

@@ -6,15 +6,22 @@ import 'body_components/part_one.dart';
 import 'body_components/part_three.dart';
 import 'body_components/part_two.dart';
 
-class PageBody extends StatefulWidget {
-  const PageBody({super.key});
+class PageBody extends StatelessWidget {
+  const PageBody(
+      {super.key,
+      required this.aboutUsKey,
+      required this.servicesKey,
+      required this.caseStudyKey,
+      required this.scrollController,
+      required this.screenSize,
+      required this.contactUsKey});
 
-  @override
-  State<PageBody> createState() => _PageBodyState();
-}
-
-class _PageBodyState extends State<PageBody> {
-  Size screenSize = Config.screenSize;
+  final GlobalKey aboutUsKey;
+  final GlobalKey servicesKey;
+  final GlobalKey caseStudyKey;
+  final GlobalKey contactUsKey;
+  final ScrollController scrollController;
+  final Size screenSize;
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +43,22 @@ class _PageBodyState extends State<PageBody> {
               ),
             ),
           ),
-          MidPartOne(screenSize: screenSize),
-          MidPartTwo(screenSize: screenSize),
-          MidPartThree(screenSize: screenSize),
-          MidPartFour(screenSize: screenSize),
+          MidPartOne(
+            screenSize: screenSize,
+            aboutUsKey: aboutUsKey,
+          ),
+          MidPartTwo(
+            screenSize: screenSize,
+            servicesKey: servicesKey,
+          ),
+          MidPartThree(
+            screenSize: screenSize,
+            caseStudyKey: caseStudyKey,
+          ),
+          MidPartFour(
+            screenSize: screenSize,
+            contactUsKey: contactUsKey,
+          ),
         ],
       ),
     );

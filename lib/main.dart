@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:owow/core/constant/ui_constant.dart';
 
 import 'core/config/theme/theme.dart';
+import 'core/constant/ui_constant.dart';
 import 'src/view/home/home_main.dart';
 
 void main() {
