@@ -4,19 +4,21 @@ import 'package:flutter/material.dart';
 import '../../../../core/constant/ui_constant.dart';
 import '../../common/footer.dart';
 
-class PageEnding extends StatefulWidget {
-  const PageEnding({super.key});
+class PageEnding extends StatelessWidget {
+  const PageEnding(
+      {super.key,
+      required this.careerKey,
+      required this.scrollController,
+      required this.screenSize});
 
-  @override
-  State<PageEnding> createState() => _PageEndingState();
-}
-
-class _PageEndingState extends State<PageEnding> {
-  Size screenSize = Config.screenSize;
+  final GlobalKey careerKey;
+  final ScrollController scrollController;
+  final Size screenSize;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      key: careerKey,
       width: screenSize.width,
       height: screenSize.height,
       child: Stack(

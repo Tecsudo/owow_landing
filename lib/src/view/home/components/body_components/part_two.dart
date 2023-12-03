@@ -4,13 +4,16 @@ class MidPartTwo extends StatelessWidget {
   const MidPartTwo({
     super.key,
     required this.screenSize,
+    required this.servicesKey,
   });
 
   final Size screenSize;
+  final GlobalKey servicesKey;
 
   @override
   Widget build(BuildContext context) {
     return Align(
+        key: servicesKey,
         alignment: Alignment.centerLeft,
         child: Padding(
           padding: EdgeInsets.only(

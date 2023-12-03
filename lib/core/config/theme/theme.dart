@@ -4,6 +4,7 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData lightTheme = ThemeData(
+    visualDensity: VisualDensity.adaptivePlatformDensity,
     useMaterial3: true,
     fontFamily: 'Poppins',
     colorScheme: ColorScheme.fromSeed(
@@ -13,6 +14,7 @@ class AppTheme {
   );
 
   static ThemeData darkTheme = ThemeData(
+    visualDensity: VisualDensity.adaptivePlatformDensity,
     useMaterial3: true,
     fontFamily: 'Poppins',
     colorScheme: ColorScheme.fromSeed(

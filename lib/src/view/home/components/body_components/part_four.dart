@@ -1,46 +1,25 @@
 import 'package:flutter/material.dart';
 
-class MidPartFour extends StatefulWidget {
+class MidPartFour extends StatelessWidget {
   const MidPartFour({
     super.key,
     required this.screenSize,
+    required this.contactUsKey,
   });
   final Size screenSize;
+  final GlobalKey contactUsKey;
 
-  @override
-  State<MidPartFour> createState() => _MidPartFourState();
-}
-
-class _MidPartFourState extends State<MidPartFour> {
-  final _formKey = GlobalKey<FormState>();
-
-  // TextEditingController _name = TextEditingController();
-
-  // TextEditingController _email = TextEditingController();
-
-  // TextEditingController _phone = TextEditingController();
-
-  // TextEditingController _company = TextEditingController();
-
-  // TextEditingController _details = TextEditingController();
-
-  // final List<String> _list = [
-  //   'Developer',
-  //   'Designer',
-  //   'Consultant',
-  //   'Student',
-  // ];
-
+  // final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomRight,
       child: Form(
-        key: _formKey,
+        key: contactUsKey,
         child: Container(
-            height: widget.screenSize.height * .7,
+            height: screenSize.height * .7,
             margin: EdgeInsets.symmetric(
-              horizontal: widget.screenSize.width * .03,
+              horizontal: screenSize.width * .03,
             ),
             child: Row(
               children: [
@@ -93,8 +72,8 @@ class _MidPartFourState extends State<MidPartFour> {
                 Expanded(
                   flex: 6,
                   child: Container(
-                    margin: EdgeInsets.symmetric(
-                        vertical: widget.screenSize.height * .05),
+                    margin:
+                        EdgeInsets.symmetric(vertical: screenSize.height * .05),
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [

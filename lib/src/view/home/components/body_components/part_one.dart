@@ -8,13 +8,16 @@ class MidPartOne extends StatelessWidget {
   const MidPartOne({
     super.key,
     required this.screenSize,
+    required this.aboutUsKey,
   });
 
   final Size screenSize;
+  final GlobalKey aboutUsKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: aboutUsKey,
       margin: EdgeInsets.symmetric(horizontal: screenSize.width * .01),
       width: screenSize.width,
       height: screenSize.height * 1,
@@ -41,44 +44,11 @@ class MidPartOne extends StatelessWidget {
                             height: 0,
                           ),
                         ),
-                        // TextSpan(
-                        //   text:
-                        //       '“Hi everyone! At O WOW, our mission is to always act in your best interests. We\'ve got you covered no matter whichever industry or field you belong to. Consider us as your personalized remedy, ready to bridge the gaps and provide you with precisely what you require. What is in our toolkit? To ease your life, we have some fantastic features lined up.”',
-                        //   style: TextStyle(
-                        //     color: Color(0xFFFF8E49),
-                        //     fontSize: 20,
-                        //     fontFamily: 'Poppins',
-                        //     fontWeight: FontWeight.w600,
-                        //     height: 0,
-                        //   ),
-                        // ),
                       ],
-                      /* 
-                       'WE HAVE SOMETHING FOR EVERYONE',
-                    style: TextStyle(
-                      color: Color(0xFFFF8E49),
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700,
-                      height: 0,
-                     */
                     ),
                   ),
                 ),
-                // SizedBox(
-                //   child: Text(
-                //     'For You',
-                //     style: TextStyle(
-                //       color: Color(0xFFFF8E49),
-                //       fontSize: 24,
-                //       fontFamily: 'Poppins',
-                //       fontWeight: FontWeight.w500,
-                //       height: 0,
-                //     ),
-                //   ),
-                // ),
                 SizedBox(
-                  // height: 230.16,
                   child: Text.rich(
                     TextSpan(
                       children: [
