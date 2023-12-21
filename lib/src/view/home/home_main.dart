@@ -43,36 +43,34 @@ class _HomeMainState extends State<HomeMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Expanded(
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          children: [
-            PageStart(
-              aboutUsKey: aboutUsKey,
-              servicesKey: servicesKey,
-              caseStudyKey: caseStudyKey,
-              contactUsKey: contactUsKey,
-              homeKey: homeKey,
-              careerKey: careerKey,
-              scrollController: scrollController,
-              screenSize: screenSize,
-            ),
-            PageBody(
-              aboutUsKey: aboutUsKey,
-              servicesKey: servicesKey,
-              caseStudyKey: caseStudyKey,
-              contactUsKey: contactUsKey,
-              screenSize: screenSize,
-              scrollController: scrollController,
-            ),
-            PageEnding(
-              careerKey: careerKey,
-              screenSize: screenSize,
-              scrollController: scrollController,
-            ),
-          ],
-        ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        children: [
+          PageStart(
+            aboutUsKey: aboutUsKey,
+            servicesKey: servicesKey,
+            caseStudyKey: caseStudyKey,
+            contactUsKey: contactUsKey,
+            homeKey: homeKey,
+            careerKey: careerKey,
+            scrollController: scrollController,
+            screenSize: screenSize,
+          ),
+          PageBody(
+            aboutUsKey: aboutUsKey,
+            servicesKey: servicesKey,
+            caseStudyKey: caseStudyKey,
+            contactUsKey: contactUsKey,
+            screenSize: screenSize,
+            scrollController: scrollController,
+          ),
+          PageEnding(
+            careerKey: careerKey,
+            screenSize: screenSize,
+            scrollController: scrollController,
+          ),
+        ],
       ),
     );
   }
