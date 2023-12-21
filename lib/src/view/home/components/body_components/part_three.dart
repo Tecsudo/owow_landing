@@ -45,59 +45,54 @@ class MidPartThree extends StatelessWidget {
             const Spacer(),
             SizedBox(
               height: screenSize.height * 1.3,
-              child: Flexible(
-                child: Column(
-                  children: [
-                    EndContentShapes(
-                      screenSize: screenSize,
-                      gradientColors: const [
-                        Color(0xFF4074BA),
-                        Color(0xFF5EA3D9)
-                      ],
-                      text:
-                          'The O Wow Effect:\nA Case Study on Boosting Revenue and Loyalty through Intent-Based Promotions.',
-                    ),
-                    EndContentShapes(
-                      screenSize: screenSize,
-                      gradientColors: const [
-                        Color(0xFFED7B23),
-                        Color(0xFFF4AE2C)
-                      ],
-                      text:
-                          'Navigating Customer’s Loyalty in Fashion and Style.',
-                    ),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  EndContentShapes(
+                    screenSize: screenSize,
+                    gradientColors: const [
+                      Color(0xFF4074BA),
+                      Color(0xFF5EA3D9)
+                    ],
+                    text:
+                        'The O Wow Effect:\nA Case Study on Boosting Revenue and Loyalty through Intent-Based Promotions.',
+                  ),
+                  EndContentShapes(
+                    screenSize: screenSize,
+                    gradientColors: const [
+                      Color(0xFFED7B23),
+                      Color(0xFFF4AE2C)
+                    ],
+                    text: 'Navigating Customer’s Loyalty in Fashion and Style.',
+                  ),
+                ],
               ),
             ),
             SizedBox(
               height: screenSize.height * 1.3,
-              child: Flexible(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: screenSize.height * .22,
-                    ),
-                    EndContentShapes(
-                      screenSize: screenSize,
-                      gradientColors: const [
-                        Color(0xFFD33D54),
-                        Color(0xFFDB6777)
-                      ],
-                      text:
-                          'Revive & Thrive:\n O WOW\'s Solution to Restaurant Slow Times O WOW\'s Blueprint for Conquering Restaurant Downtime.',
-                    ),
-                    EndContentShapes(
-                      screenSize: screenSize,
-                      gradientColors: const [
-                        Color(0xFF0AB89D),
-                        Color(0xFF3DC0B5)
-                      ],
-                      text:
-                          'O WOW\'s Vision for Consistent Wellness Revenue O WOW\'s Path to Boosted Revenue and Client Bonds.',
-                    ),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: screenSize.height * .22,
+                  ),
+                  EndContentShapes(
+                    screenSize: screenSize,
+                    gradientColors: const [
+                      Color(0xFFD33D54),
+                      Color(0xFFDB6777)
+                    ],
+                    text:
+                        'Revive & Thrive:\n O WOW\'s Solution to Restaurant Slow Times O WOW\'s Blueprint for Conquering Restaurant Downtime.',
+                  ),
+                  EndContentShapes(
+                    screenSize: screenSize,
+                    gradientColors: const [
+                      Color(0xFF0AB89D),
+                      Color(0xFF3DC0B5)
+                    ],
+                    text:
+                        'O WOW\'s Vision for Consistent Wellness Revenue O WOW\'s Path to Boosted Revenue and Client Bonds.',
+                  ),
+                ],
               ),
             ),
           ],
