@@ -34,7 +34,9 @@ class MyApp extends StatelessWidget {
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: {
           PointerDeviceKind.mouse,
-          PointerDeviceKind.touch,
+          PointerDeviceKind.touch,flutter upgrade
+flutter upgrade
+
           PointerDeviceKind.stylus,
           PointerDeviceKind.unknown
         },
