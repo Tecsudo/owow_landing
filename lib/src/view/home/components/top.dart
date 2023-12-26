@@ -6,7 +6,7 @@ import '../../../../core/widget/word_logo.dart';
 import '../../common/header.dart';
 
 class PageStart extends StatelessWidget {
-  PageStart(
+  const PageStart(
       {super.key,
       required this.aboutUsKey,
       required this.servicesKey,
@@ -104,22 +104,22 @@ class PageStart extends StatelessWidget {
                                     TypewriterAnimatedText(
                                       'Innovators',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                     TypewriterAnimatedText(
                                       'Dreamers',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                     TypewriterAnimatedText(
                                       'Creators',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                     TypewriterAnimatedText(
                                       'Story Tellers',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                   ],
                                 ),
