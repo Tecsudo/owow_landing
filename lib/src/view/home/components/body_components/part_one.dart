@@ -20,7 +20,7 @@ class MidPartOne extends StatelessWidget {
       key: aboutUsKey,
       margin: EdgeInsets.symmetric(horizontal: screenSize.width * .01),
       width: screenSize.width,
-      height: screenSize.height * 1,
+      height: screenSize.height * 1.2,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -35,7 +35,7 @@ class MidPartOne extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: 'WE HAVE SOMETHING FOR EVERYONE',
+                          text: 'WOW your Brand Experience',
                           style: TextStyle(
                             color: Color(0xFFFF8E49),
                             fontSize: 36,
@@ -54,12 +54,12 @@ class MidPartOne extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                              '“Hi everyone! At O WOW, our mission is to always act in your best interests. We\'ve got you covered no matter whichever industry or field you belong to. Consider us as your personalized remedy, ready to bridge the gaps and provide you with precisely what you require. What is in our toolkit? To ease your life, we have some fantastic features lined up.”',
+                              'Step into a realm where success stories come to life, where brands transcend their limits and achieve unprecedented heights. Our cutting-edge SaaS solution is more than just a feedback tool; it\'s the catalyst for your brand\'s triumph. Imagine a journey where your success story is crafted with precision, fueled by a Deep Understanding of your Customer\'s Behavior. Through our innovative feedback platform, you\'re not merely collecting data; you\'re unlocking the secrets to customer satisfaction, paving the way for more profits and sustained growth. Witness the magic of low marketing costs as your brand experience becomes a beacon, drawing in customers organically. We believe that every business has a unique narrative waiting to unfold, and with our solution, you\'ll not only tell your story but shape it into a resounding success. It\'s more than feedback; it\'s the key to your brand\'s evolution, ensuring that your business not only thrives but becomes an unstoppable force in your industry. Welcome to a future where success is not just a destination but a journey fueled by insight, innovation, and unparalleled brand experience.',
                           style: TextStyle(
                             color: Color(0xFFFF8E49),
-                            fontSize: 20,
+                            fontSize: 18,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             height: 0,
                           ),
                         ),
@@ -98,13 +98,13 @@ class MidContentShapes extends StatelessWidget {
             children: [
               MidShadowBox(
                 screenSize: screenSize,
-                iconPath: '${Config.imagePath}/mid_two.png',
-                text: 'Revenue Growth',
+                iconPath: '${Config.imagePath}/restaurant.png',
+                text: 'Restaurants / Cafe',
               ),
               MidShadowBox(
                 screenSize: screenSize,
-                iconPath: '${Config.imagePath}/mid_three.png',
-                text: 'Cost Cutting',
+                iconPath: '${Config.imagePath}/woman.png',
+                text: 'Fashion',
               ),
             ],
           ),
@@ -113,13 +113,13 @@ class MidContentShapes extends StatelessWidget {
             children: [
               MidShadowBox(
                 screenSize: screenSize,
-                iconPath: '${Config.imagePath}/mid_one.png',
-                text: 'Better Decision Making',
+                iconPath: '${Config.imagePath}/supermarkets.png',
+                text: 'Retail',
               ),
               MidShadowBox(
                 screenSize: screenSize,
-                iconPath: '${Config.imagePath}/mid_four.png',
-                text: 'Customers Awareness',
+                iconPath: '${Config.imagePath}/residential.png',
+                text: 'Real Estate',
               ),
             ],
           ),

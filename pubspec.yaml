@@ -38,6 +38,7 @@ dependencies:
   animated_custom_dropdown: ^2.0.0
   adaptive_navbar: ^0.0.3
   get: ^4.6.6
+  responsive_framework: ^1.1.1
 
 dev_dependencies:
   flutter_test:

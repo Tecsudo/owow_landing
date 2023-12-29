@@ -54,7 +54,7 @@ class MidPartThree extends StatelessWidget {
                       Color(0xFF5EA3D9)
                     ],
                     text:
-                        'The O Wow Effect:\nA Case Study on Boosting Revenue and Loyalty through Intent-Based Promotions.',
+                        'The O Wow Effect: A Case Study on Boosting Revenue and Loyalty through Intent-Based Promotions.',
                   ),
                   EndContentShapes(
                     screenSize: screenSize,
@@ -81,7 +81,7 @@ class MidPartThree extends StatelessWidget {
                       Color(0xFFDB6777)
                     ],
                     text:
-                        'Revive & Thrive:\n O WOW\'s Solution to Restaurant Slow Times O WOW\'s Blueprint for Conquering Restaurant Downtime.',
+                        'Revive & Thrive: O WOW\'s Solution to Restaurant Slow Times/O WOW\'s Blueprint for Conquering Restaurant Downtime.',
                   ),
                   EndContentShapes(
                     screenSize: screenSize,
@@ -90,7 +90,7 @@ class MidPartThree extends StatelessWidget {
                       Color(0xFF3DC0B5)
                     ],
                     text:
-                        'O WOW\'s Vision for Consistent Wellness Revenue O WOW\'s Path to Boosted Revenue and Client Bonds.',
+                        'O WOW\'s Vision for Consistent Wellness Revenue/O WOW\'s Path to Boosted Revenue and Client Bonds.',
                   ),
                 ],
               ),

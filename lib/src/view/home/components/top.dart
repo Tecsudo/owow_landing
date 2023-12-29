@@ -77,7 +77,7 @@ class PageStart extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
-                              'We are: ',
+                              'O WOW ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 36,
@@ -87,7 +87,7 @@ class PageStart extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width: 370.0,
+                              width: 500.0,
                               child: DefaultTextStyle(
                                 maxLines: 1,
                                 style: const TextStyle(
@@ -102,22 +102,42 @@ class PageStart extends StatelessWidget {
                                   isRepeatingAnimation: true,
                                   animatedTexts: [
                                     TypewriterAnimatedText(
-                                      'Innovators',
+                                      'WOW YOUR WALLET',
                                       speed: const Duration(milliseconds: 250),
                                       curve: Easing.legacy,
                                     ),
                                     TypewriterAnimatedText(
-                                      'Dreamers',
+                                      'Data-Driven Perspective',
                                       speed: const Duration(milliseconds: 250),
                                       curve: Easing.legacy,
                                     ),
                                     TypewriterAnimatedText(
-                                      'Creators',
+                                      'We are in the END (Reach) game',
                                       speed: const Duration(milliseconds: 250),
                                       curve: Easing.legacy,
                                     ),
                                     TypewriterAnimatedText(
-                                      'Story Tellers',
+                                      'Turning your "Ows!" to "WOWs!"',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'We Make \'SOLD\' Happen!',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'Not all Heroes wear Capes, some do Sales!',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'Smoothen your Rush Hours',
+                                      speed: const Duration(milliseconds: 250),
+                                      curve: Easing.legacy,
+                                    ),
+                                    TypewriterAnimatedText(
+                                      'Wow Your Dead Hours',
                                       speed: const Duration(milliseconds: 250),
                                       curve: Easing.legacy,
                                     ),
