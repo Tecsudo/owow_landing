@@ -6,7 +6,7 @@ import '../../../../core/widget/word_logo.dart';
 import '../../common/header.dart';
 
 class PageStart extends StatelessWidget {
-  PageStart(
+  const PageStart(
       {super.key,
       required this.aboutUsKey,
       required this.servicesKey,
@@ -104,17 +104,17 @@ class PageStart extends StatelessWidget {
                                     TypewriterAnimatedText(
                                       'WOW YOUR WALLET',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                     TypewriterAnimatedText(
                                       'Data-Driven Perspective',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                     TypewriterAnimatedText(
                                       'We are in the END (Reach) game',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                     TypewriterAnimatedText(
                                       'Turning your "Ows!" to "WOWs!"',
@@ -139,7 +139,7 @@ class PageStart extends StatelessWidget {
                                     TypewriterAnimatedText(
                                       'Wow Your Dead Hours',
                                       speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
+                                      curve: Curves.ease,
                                     ),
                                   ],
                                 ),

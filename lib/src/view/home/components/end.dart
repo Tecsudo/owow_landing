@@ -77,7 +77,8 @@ class PageEnding extends StatelessWidget {
                               TypewriterAnimatedText(
                                 'At “O WoW!”, we\'re more than just a workplace.',
                                 speed: const Duration(milliseconds: 150),
-                                curve: Easing.legacy,
+                                curve: Curves.ease,
+                                // curve: Easing.legacy,
                               ),
                               TypewriterAnimatedText(
                                 'Join us in creating meaningful connections and memorable experiences for people worldwide.',
