@@ -27,8 +27,9 @@ class MidPartTwo extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  child: Text.rich(
+                Container(
+                  margin: EdgeInsets.only(left: screenSize.width * .015),
+                  child: const Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
@@ -45,9 +46,10 @@ class MidPartTwo extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
+                Container(
+                  margin: EdgeInsets.only(left: screenSize.width * .015),
                   width: 1000,
-                  child: Text.rich(
+                  child: const Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(

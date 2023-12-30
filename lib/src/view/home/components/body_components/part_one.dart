@@ -38,9 +38,9 @@ class MidPartOne extends StatelessWidget {
                           text: 'WOW your Brand Experience',
                           style: TextStyle(
                             color: Color(0xFFFF8E49),
-                            fontSize: 36,
+                            fontSize: 32,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w800,
                             height: 0,
                           ),
                         ),
@@ -88,8 +88,8 @@ class MidContentShapes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: screenSize.width * .5,
-      height: screenSize.height * 1,
+      width: screenSize.width * .38,
+      height: screenSize.height * .75,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -145,13 +145,13 @@ class MidShadowBox extends StatelessWidget {
   Widget build(BuildContext context) {
     log(iconPath, name: 'MidShadowBox');
     return Container(
-      width: screenSize.width * .2,
-      height: screenSize.height * .4,
+      width: screenSize.width * .17,
+      height: screenSize.height * .35,
       padding: EdgeInsets.symmetric(horizontal: screenSize.width * .02),
       decoration: ShapeDecoration(
         color: const Color(0xFFF6F6F6),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(51),
+          borderRadius: BorderRadius.circular(30),
         ),
         shadows: const [
           BoxShadow(
