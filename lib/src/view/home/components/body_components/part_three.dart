@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 
-class MidPartThree extends StatelessWidget {
-  const MidPartThree({
+class CaseStudy extends StatelessWidget {
+  const CaseStudy({
     super.key,
     required this.screenSize,
-    required this.caseStudyKey,
   });
 
   final Size screenSize;
-  final GlobalKey caseStudyKey;
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      key: caseStudyKey,
       alignment: Alignment.bottomLeft,
       child: Container(
         margin: EdgeInsets.only(

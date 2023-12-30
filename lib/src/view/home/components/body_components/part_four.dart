@@ -1,24 +1,22 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:owow/src/view/common/background.dart';
 
-class MidPartFour extends StatefulWidget {
-  const MidPartFour({
+class ContactUs extends StatefulWidget {
+  const ContactUs({
     super.key,
     required this.screenSize,
-    required this.contactUsKey,
   });
   final Size screenSize;
-  final GlobalKey contactUsKey;
 
   @override
-  State<MidPartFour> createState() => _MidPartFourState();
+  State<ContactUs> createState() => _ContactUsState();
 }
 
-class _MidPartFourState extends State<MidPartFour> {
+class _ContactUsState extends State<ContactUs> {
   final _formKey = GlobalKey<FormState>();
 
-  // Create a text controller for each field
   final nameController = TextEditingController();
   final companyController = TextEditingController();
   final emailController = TextEditingController();
@@ -27,7 +25,6 @@ class _MidPartFourState extends State<MidPartFour> {
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed
     nameController.dispose();
     companyController.dispose();
     emailController.dispose();
@@ -36,197 +33,190 @@ class _MidPartFourState extends State<MidPartFour> {
     super.dispose();
   }
 
-  // final GlobalKey contactUsKey;
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomRight,
+    return HomeBackground(
       child: Form(
         key: _formKey,
-        child: Container(
-            height: widget.screenSize.height * .7,
-            margin: EdgeInsets.symmetric(
-              horizontal: widget.screenSize.width * .03,
-            ),
+        child: SizedBox(
+            height: 600,
             child: Row(
               children: [
                 //? title and button
                 Expanded(
                   flex: 1,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text(
-                        'GET IN TOUCH',
-                        style: TextStyle(
-                          color: Color(0xFFFF8E49),
-                          fontSize: 36,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      SizedBox(
-                        width: 250,
-                        height: 50,
-                        child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              surfaceTintColor: const Color(0xFFF4AE2C),
-                              // surfaceTintColor: Colors.white,
-                              backgroundColor: Colors.white,
-                              foregroundColor: Colors.black,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              shadowColor: Colors.black.withOpacity(.3),
-                              elevation: 4,
-                            ),
-                            onPressed: () {
-                              if (_formKey.currentState!.validate()) {
-                                // If the form is valid, display a Snackbar
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content: Text('Processing Data')));
-                                // Here, you would usually send the data to the server or elsewhere
-                              }
-                            },
-                            child: const Text(
-                              'Continue',
-                              style: TextStyle(
-                                color: Color(0xFFFF9148),
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            )),
-                      )
-                    ],
-                  ),
+                  child: _leftLayout(context),
                 ),
                 //? contact forms
                 Expanded(
                   flex: 3,
-                  child: Container(
-                    height: widget.screenSize.height * .35,
-                    margin: EdgeInsets.symmetric(
-                        horizontal: widget.screenSize.width * .05),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          height: widget.screenSize.height * .1,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              SizedBox(
-                                width: widget.screenSize.width * .295,
-                                child: CustomTextFormField(
-                                  controller: nameController,
-                                  hintText: 'Name',
-                                  screenSize: widget.screenSize,
-                                  onChanged: (value) {
-                                    log(value, name: 'Form|Name');
-                                  },
-                                  validator: (String? value) {
-                                    if (value!.isEmpty) {
-                                      return 'Please enter your name';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                width: widget.screenSize.width * .25,
-                                child: CustomTextFormField(
-                                  controller: companyController,
-                                  hintText: 'Company',
-                                  screenSize: widget.screenSize,
-                                  onChanged: (value) {
-                                    log(value, name: 'Form|Company');
-                                  },
-                                  validator: (String? value) {
-                                    if (value!.isEmpty) {
-                                      return 'Please enter your company name';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: widget.screenSize.height * .1,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              SizedBox(
-                                width: widget.screenSize.width * .346,
-                                child: CustomTextFormField(
-                                  controller: emailController,
-                                  hintText: 'Email',
-                                  screenSize: widget.screenSize,
-                                  onChanged: (value) {
-                                    log(value, name: 'Form|Email');
-                                  },
-                                  validator: (String? value) {
-                                    if (value!.isEmpty ||
-                                        !value.contains('@')) {
-                                      return 'Please enter a valid email';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                width: widget.screenSize.width * .2,
-                                child: CustomTextFormField(
-                                  controller: phoneController,
-                                  hintText: 'Phone',
-                                  screenSize: widget.screenSize,
-                                  onChanged: (value) {
-                                    log(value, name: 'Form|Phone');
-                                  },
-                                  validator: (String? value) {
-                                    if (value!.isEmpty) {
-                                      return 'Please enter your phone number';
-                                    }
-                                    return null;
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: widget.screenSize.height * .15,
-                          width: widget.screenSize.width * .58,
-                          child: CustomTextFormField(
-                            controller: detailsController,
-                            screenSize: widget.screenSize,
-                            expands: true,
-                            maxLines: null,
-                            hintText: 'Details',
-                            inputType: TextInputType.multiline,
-                            onChanged: (value) {
-                              log(value, name: 'Form|Details');
-                            },
-                            validator: (String? value) {
-                              if (value!.isEmpty) {
-                                return 'Please enter details';
-                              }
-                              return null;
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: _rightLayout(context),
                 ),
               ],
             )),
+      ),
+    );
+  }
+
+  Widget _rightLayout(BuildContext context) {
+    return SizedBox(
+      height: 400,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          SizedBox(
+            height: 80,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: CustomTextFormField(
+                    controller: nameController,
+                    hintText: 'Name',
+                    screenSize: widget.screenSize,
+                    onChanged: (value) {
+                      log(value, name: 'Form|Name');
+                    },
+                    validator: (String? value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter your name';
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+                SizedBox(
+                  width: 300,
+                  child: CustomTextFormField(
+                    controller: companyController,
+                    hintText: 'Company',
+                    screenSize: widget.screenSize,
+                    onChanged: (value) {
+                      log(value, name: 'Form|Company');
+                    },
+                    validator: (String? value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter your company name';
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 80,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: CustomTextFormField(
+                    controller: emailController,
+                    hintText: 'Email',
+                    screenSize: widget.screenSize,
+                    onChanged: (value) {
+                      log(value, name: 'Form|Email');
+                    },
+                    validator: (String? value) {
+                      if (value!.isEmpty || !value.contains('@')) {
+                        return 'Please enter a valid email';
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+                SizedBox(
+                  width: 300,
+                  child: CustomTextFormField(
+                    controller: phoneController,
+                    hintText: 'Phone',
+                    screenSize: widget.screenSize,
+                    onChanged: (value) {
+                      log(value, name: 'Form|Phone');
+                    },
+                    validator: (String? value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter your phone number';
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 120,
+            width: 800,
+            child: CustomTextFormField(
+              controller: detailsController,
+              screenSize: widget.screenSize,
+              expands: true,
+              maxLines: null,
+              hintText: 'Details',
+              inputType: TextInputType.multiline,
+              onChanged: (value) {
+                log(value, name: 'Form|Details');
+              },
+              validator: (String? value) {
+                if (value!.isEmpty) {
+                  return 'Please enter details';
+                }
+                return null;
+              },
+            ),
+          ),
+          SizedBox(
+            width: 250,
+            height: 50,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  surfaceTintColor: Color(0xFFE09405),
+                  // surfaceTintColor: Colors.white,
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  shadowColor: Colors.black.withOpacity(.3),
+                  elevation: 4,
+                ),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    // If the form is valid, display a Snackbar
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Processing Data')));
+                    // Here, you would usually send the data to the server or elsewhere
+                  }
+                },
+                child: const Text(
+                  'Continue',
+                  style: TextStyle(
+                    color: Color(0xFFFF9148),
+                    fontSize: 16,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w600,
+                    height: 0,
+                  ),
+                )),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _leftLayout(BuildContext context) {
+    return const Center(
+      child: Text(
+        'GET IN TOUCH',
+        style: TextStyle(
+          color: Color(0xFFFF8E49),
+          fontSize: 36,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w700,
+        ),
       ),
     );
   }
@@ -299,276 +289,3 @@ class CustomTextFormField extends StatelessWidget {
     );
   }
 }
-
-
-// import 'package:flutter/material.dart';
-
-// class MidPartFour extends StatelessWidget {
-//   const MidPartFour({
-//     super.key,
-//     required this.screenSize,
-//     required this.contactUsKey,
-//   });
-//   final Size screenSize;
-//   final GlobalKey contactUsKey;
-
-//   // final _formKey = GlobalKey<FormState>();
-//   @override
-//   Widget build(BuildContext context) {
-//     return Align(
-//       alignment: Alignment.bottomRight,
-//       child: Form(
-//         key: contactUsKey,
-//         child: Container(
-//             height: screenSize.height * .7,
-//             margin: EdgeInsets.symmetric(
-//               horizontal: screenSize.width * .03,
-//             ),
-//             child: Row(
-//               children: [
-//                 Expanded(
-//                   flex: 2,
-//                   child: Column(
-//                     mainAxisAlignment: MainAxisAlignment.center,
-//                     children: [
-//                       const Text(
-//                         'GET IN TOUCH',
-//                         style: TextStyle(
-//                           color: Color(0xFFFF8E49),
-//                           fontSize: 36,
-//                           fontFamily: 'Poppins',
-//                           fontWeight: FontWeight.w700,
-//                         ),
-//                       ),
-//                       const SizedBox(
-//                         height: 20,
-//                       ),
-//                       SizedBox(
-//                         width: 250,
-//                         height: 50,
-//                         child: ElevatedButton(
-//                             style: ElevatedButton.styleFrom(
-//                               surfaceTintColor: const Color(0xFFF4AE2C),
-//                               // surfaceTintColor: Colors.white,
-//                               backgroundColor: Colors.white,
-//                               foregroundColor: Colors.black,
-//                               shape: RoundedRectangleBorder(
-//                                   borderRadius: BorderRadius.circular(10)),
-//                               shadowColor: Colors.black.withOpacity(.3),
-//                               elevation: 4,
-//                             ),
-//                             onPressed: () {},
-//                             child: const Text(
-//                               'Continue',
-//                               style: TextStyle(
-//                                 color: Color(0xFFFF9148),
-//                                 fontSize: 16,
-//                                 fontFamily: 'Poppins',
-//                                 fontWeight: FontWeight.w600,
-//                                 height: 0,
-//                               ),
-//                             )),
-//                       )
-//                     ],
-//                   ),
-//                 ),
-//                 Expanded(
-//                   flex: 6,
-//                   child: Container(
-//                     margin:
-//                         EdgeInsets.symmetric(vertical: screenSize.height * .05),
-//                     child: const Column(
-//                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                       children: [
-//                         SizedBox(
-//                           height: 50,
-//                           child: Row(
-//                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                             children: [
-//                               Text(
-//                                 'I’m inquiring about:',
-//                                 style: TextStyle(
-//                                   fontSize: 20,
-//                                   fontWeight: FontWeight.bold,
-//                                 ),
-//                               ),
-//                               // FakeTextField(name: 'Support'),
-
-//                               //TODO: fix this dropdown
-//                               // CustomDropdown<String>(
-//                               //   hintText: 'Select job role',
-//                               //   items: _list,
-//                               //   onChanged: (value) {
-//                               //     log('changing value to: $value');
-//                               //   },
-//                               // )
-//                             ],
-//                           ),
-//                         ),
-//                         SizedBox(
-//                           height: 50,
-//                           child: Row(
-//                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                             children: [
-//                               // Container(
-//                               //   decoration: BoxDecoration(
-//                               //     color: const Color(0xFFB7CAA9),
-//                               //     borderRadius: BorderRadius.circular(5.0),
-//                               //   ),
-//                               //   child: Padding(
-//                               //     padding: const EdgeInsets.only(
-//                               //         left: 15, right: 15, top: 5),
-//                               //     child: TextFormField(
-//                               //       controller: _name,
-//                               //       style: const TextStyle(
-//                               //         color: Color(0xFF132513),
-//                               //         fontSize: 18,
-//                               //         fontWeight: FontWeight.w400,
-//                               //         height: 0,
-//                               //       ),
-//                               //       decoration: InputDecoration(
-//                               //         border: InputBorder.none,
-//                               //         hintText: 'user@exapmle.com',
-//                               //         helperText: 'Email',
-//                               //         hintStyle: Theme.of(context)
-//                               //             .textTheme
-//                               //             .bodyLarge
-//                               //             ?.copyWith(
-//                               //               color: const Color(0xFF5E6E59),
-//                               //             ),
-//                               //       ),
-//                               //       validator: (value) {
-//                               //         if (value == null || value.isEmpty) {
-//                               //           return 'Please enter your  email';
-//                               //         }
-//                               //         // else if (!isEmailOrPhoneNumber(value)) {
-//                               //         //   return 'Please enter a valid email';
-//                               //         // }
-//                               //         return null;
-//                               //       },
-//                               //     ),
-//                               //   ),
-//                               // ),
-//                               FakeTextField(name: 'Name'),
-//                               FakeTextField(name: 'Company'),
-
-//                               // Text(
-//                               //   'name',
-//                               //   style: TextStyle(
-//                               //     fontSize: 20,
-//                               //     fontWeight: FontWeight.bold,
-//                               //   ),
-//                               // ),
-//                               // Text(
-//                               //   'company',
-//                               //   style: TextStyle(
-//                               //     fontSize: 20,
-//                               //     fontWeight: FontWeight.bold,
-//                               //   ),
-//                               // ),
-//                             ],
-//                           ),
-//                         ),
-//                         SizedBox(
-//                           height: 50,
-//                           child: Row(
-//                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                             children: [
-//                               FakeTextField(name: 'Email'),
-//                               FakeTextField(name: 'Phone'),
-//                               // Text(
-//                               //   'email',
-//                               //   style: TextStyle(
-//                               //     fontSize: 20,
-//                               //     fontWeight: FontWeight.bold,
-//                               //   ),
-//                               // ),
-//                               // Text(
-//                               //   'phone',
-//                               //   style: TextStyle(
-//                               //     fontSize: 20,
-//                               //     fontWeight: FontWeight.bold,
-//                               //   ),
-//                               // ),
-//                             ],
-//                           ),
-//                         ),
-//                         SizedBox(
-//                           height: 50,
-//                           child: FakeTextField(name: 'Details'),
-//                           // Text(
-//                           //   'details',
-//                           //   style: TextStyle(
-//                           //     fontSize: 20,
-//                           //     fontWeight: FontWeight.bold,
-//                           //   ),
-//                           // ),
-//                         ),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             )),
-//       ),
-//     );
-//   }
-// }
-
-// class FakeTextField extends StatelessWidget {
-//   const FakeTextField({
-//     super.key,
-//     required this.name,
-//   });
-
-//   final String name;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       width: 313,
-//       height: 50,
-//       child: Stack(
-//         children: [
-//           Positioned(
-//             left: 0,
-//             top: 0,
-//             child: Container(
-//               width: 313,
-//               height: 50,
-//               decoration: ShapeDecoration(
-//                 color: const Color(0xFFF4AE2C),
-//                 shape: RoundedRectangleBorder(
-//                   side: const BorderSide(
-//                     width: 3,
-//                     strokeAlign: BorderSide.strokeAlignCenter,
-//                     color: Color(0xFFED7B23),
-//                   ),
-//                   borderRadius: BorderRadius.circular(5),
-//                 ),
-//               ),
-//             ),
-//           ),
-//           Positioned(
-//             left: 17,
-//             top: 14,
-//             child: SizedBox(
-//               width: 132,
-//               height: 27,
-//               child: Text(
-//                 name,
-//                 style: const TextStyle(
-//                   color: Colors.black,
-//                   fontSize: 18,
-//                   fontFamily: 'Poppins',
-//                   fontWeight: FontWeight.w400,
-//                   height: 0,
-//                 ),
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

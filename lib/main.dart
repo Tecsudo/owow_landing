@@ -14,10 +14,8 @@ void main() {
   Config.releaseMode = kReleaseMode;
   if (kReleaseMode) {
     Config.imagePath = 'assets/images';
-    // Config.workingFontPath = Config.prodFontPath;
   } else {
     Config.imagePath = 'assets/images';
-    // Config.workingFontPath = Config.devFontPath;
   }
 
   runApp(const MyApp());

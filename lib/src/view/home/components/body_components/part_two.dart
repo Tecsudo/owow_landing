@@ -1,215 +1,188 @@
 import 'package:flutter/material.dart';
+import 'package:owow/core/constant/gap_constant.dart';
+import 'package:owow/core/extensions/build_context_extension.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
-class MidPartTwo extends StatelessWidget {
-  const MidPartTwo({
+import '../../../../../core/constant/size_constant.dart';
+import '../../../common/background.dart';
+
+class Services extends StatelessWidget {
+  const Services({
     super.key,
     required this.screenSize,
-    required this.servicesKey,
   });
 
   final Size screenSize;
-  final GlobalKey servicesKey;
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-        key: servicesKey,
-        alignment: Alignment.centerLeft,
-        child: Padding(
-          padding: EdgeInsets.only(
-            top: screenSize.height * .4,
-            bottom: screenSize.height * 0.5,
-          ),
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: screenSize.width * .01),
-            width: screenSize.width,
-            height: screenSize.height * 1.6,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: screenSize.width * .015),
-                  child: const Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Revolutionizing Success: ',
-                          style: TextStyle(
-                            color: Color(0xFFFF8E49),
-                            fontSize: 36,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            height: 0,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: screenSize.width * .015),
-                  width: 1000,
-                  child: const Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Unleashing Immediate Feedback for ',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '40% More Customer Insights, ',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '25% Higher Satisfaction, ',
-                          style: TextStyle(
-                            color: Colors.orange,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '30% Increased Brand Loyalty, ',
-                          style: TextStyle(
-                            color: Colors.pink,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'and a Strategic ',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'ROI Boost of 20% ',
-                          style: TextStyle(
-                            color: Colors.green,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'with ',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '15% Cost Cutting. ',
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+    return HomeBackground(
+      child: SizedBox(
+        height: 800,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _topLayout(context),
+            _lowerLayout(context),
+          ],
+        ),
+      ),
+    );
+  }
 
-                SizedBox(
-                  width: screenSize.width,
-                  height: screenSize.height * .8,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      MidPartTwoContentBox(
-                        screenSize: screenSize,
-                        text: 'Customer Insights',
-                        gradientColors: const [
-                          Color(0xFF4074BA),
-                          Color(0xFF5EA3D9)
-                        ],
-                      ),
-                      MidPartTwoContentBox(
-                        screenSize: screenSize,
-                        text: 'Customer Engagement',
-                        gradientColors: const [
-                          Color(0xFFD33D54),
-                          Color(0xFFDB6777)
-                        ],
-                      ),
-                      MidPartTwoContentBox(
-                        screenSize: screenSize,
-                        text: 'Improve Customer Experience',
-                        gradientColors: const [
-                          Color(0xFFED7B23),
-                          Color(0xFFF4AE2C)
-                        ],
-                      ),
-                      MidPartTwoContentBox(
-                        screenSize: screenSize,
-                        text: 'Better ROI, Improve Cost Cutting',
-                        gradientColors: const [
-                          Color(0xFF0AB89D),
-                          Color(0xFF3DC0B5)
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                // const Spacer(),
-              ],
+  Widget _lowerLayout(BuildContext context) {
+    return MaxWidthBox(
+      // width: screenSize.width,
+      // height: screenSize.height * .8,
+      maxWidth: MaxSizeConstant.maxWidth,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: SizedBox(
+          height: 550,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _serviceContainerLayout(
+                context: context,
+                text: 'Customer Insights',
+                gradientColors: const [Color(0xFF4074BA), Color(0xFF5EA3D9)],
+              ),
+              _serviceContainerLayout(
+                context: context,
+                text: 'Customer Engagement',
+                gradientColors: const [Color(0xFFD33D54), Color(0xFFDB6777)],
+              ),
+              _serviceContainerLayout(
+                context: context,
+                text: 'Improve Customer Experience',
+                gradientColors: const [Color(0xFFED7B23), Color(0xFFF4AE2C)],
+              ),
+              _serviceContainerLayout(
+                context: context,
+                text: 'Better ROI, Improve Cost Cutting',
+                gradientColors: const [Color(0xFF0AB89D), Color(0xFF3DC0B5)],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _topLayout(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Align(
+          alignment: Alignment.bottomLeft,
+          child: SizedBox(
+            width: 500,
+            child: Text(
+              'Revolutionizing Success: ',
+              style: context.displayMedium!.copyWith(
+                color: const Color(0xFFFF8E49),
+                fontSize: 32,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w800,
+                height: 0,
+              ),
             ),
           ),
-        ));
+        ),
+        GapConstant.h12,
+        SizedBox(
+          width: 1000,
+          child: Text.rich(
+            TextSpan(
+              children: [
+                const TextSpan(
+                  text: 'Unleashing Immediate Feedback for ',
+                ),
+                TextSpan(
+                  text: '40% More Customer Insights, ',
+                  style: context.displayMedium!.copyWith(
+                    color: Colors.blue,
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    height: 0,
+                  ),
+                ),
+                TextSpan(
+                  text: '25% Higher Satisfaction, ',
+                  style: context.displayMedium!.copyWith(
+                    color: Colors.orange,
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    height: 0,
+                  ),
+                ),
+                TextSpan(
+                  text: '30% Increased Brand Loyalty, ',
+                  style: context.displayMedium!.copyWith(
+                    color: Colors.pink,
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    height: 0,
+                  ),
+                ),
+                const TextSpan(
+                  text: 'and a Strategic ',
+                ),
+                TextSpan(
+                  text: 'ROI Boost of 20% ',
+                  style: context.displayMedium!.copyWith(
+                    color: Colors.green,
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    height: 0,
+                  ),
+                ),
+                const TextSpan(
+                  text: 'with ',
+                ),
+                TextSpan(
+                  text: '15% Cost Cutting. ',
+                  style: context.displayMedium!.copyWith(
+                    color: Colors.red,
+                    fontSize: 18,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    height: 0,
+                  ),
+                ),
+              ],
+            ),
+            style: context.displayMedium!.copyWith(
+              color: Colors.black,
+              fontSize: 18,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+              height: 0,
+            ),
+          ),
+        ),
+      ],
+    );
   }
-}
 
-class MidPartTwoContentBox extends StatelessWidget {
-  const MidPartTwoContentBox({
-    super.key,
-    required this.screenSize,
-    required this.text,
-    required this.gradientColors,
-  });
-
-  final Size screenSize;
-  final String text;
-  final List<Color> gradientColors;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget _serviceContainerLayout(
+      {required String text,
+      required List<Color> gradientColors,
+      required BuildContext context}) {
     return SizedBox(
-      width: screenSize.width * .22,
-      height: screenSize.height * .5,
+      width: 400,
+      height: 450,
       child: Stack(
         children: [
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              width: screenSize.width * .22,
-              height: screenSize.height * .36,
+              width: 350,
+              height: 300,
               decoration: ShapeDecoration(
                 color: const Color(0xFFF6F6F6),
                 shape: RoundedRectangleBorder(
@@ -229,8 +202,8 @@ class MidPartTwoContentBox extends StatelessWidget {
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              width: screenSize.width * .17,
-              height: screenSize.height * .37, //height: 352,
+              width: 280,
+              height: 310,
               decoration: ShapeDecoration(
                 gradient: LinearGradient(
                   begin: const Alignment(0.71, 0.70),
@@ -252,19 +225,28 @@ class MidPartTwoContentBox extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.bottomCenter,
             child: Container(
-              margin: EdgeInsets.only(top: screenSize.height * .02),
-              width: screenSize.width * .15,
+              margin: const EdgeInsets.only(bottom: SizeConstant.p40),
+              width: 270,
               child: Text(
                 text,
                 textAlign: TextAlign.right,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
+                style: context.headlineSmall!.copyWith(
+                  color: Colors.black,
+                  // color: const Color(0xFFFF8E49),
+                  fontSize: 26,
                   fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w800,
+                  height: 0,
                 ),
+
+                // const TextStyle(
+                //   color: Colors.white,
+                //   fontSize: 30,
+                //   fontFamily: 'Poppins',
+                //   fontWeight: FontWeight.w700,
+                // ),
               ),
             ),
           ),
@@ -273,3 +255,21 @@ class MidPartTwoContentBox extends StatelessWidget {
     );
   }
 }
+
+// class MidPartTwoContentBox extends StatelessWidget {
+//   const MidPartTwoContentBox({
+//     super.key,
+//     required this.screenSize,
+//     required this.text,
+//     required this.gradientColors,
+//   });
+
+//   final Size screenSize;
+//   final String text;
+//   final List<Color> gradientColors;
+
+//   @override
+//   Widget build(BuildContext context) {
+    
+//   }
+// }

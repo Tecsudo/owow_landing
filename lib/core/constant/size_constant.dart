@@ -19,5 +19,5 @@ class SizeConstant {
 }
 
 class MaxSizeConstant {
-  static const double maxWidth = 1100;
+  static const double maxWidth = 1280;
 }
