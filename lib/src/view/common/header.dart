@@ -40,7 +40,7 @@ class Header extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 26,
+            fontSize: 24,
             fontFamily: 'Poppins',
             fontWeight: FontWeight.w700,
           ),

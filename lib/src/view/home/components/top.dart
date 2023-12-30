@@ -72,80 +72,61 @@ class PageStart extends StatelessWidget {
                     SizedBox(
                         width: 550,
                         // height: 230.16,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'O WOW ',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 36,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
+                        child: DefaultTextStyle(
+                          maxLines: 1,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                            letterSpacing: -0.3,
+                          ),
+                          child: AnimatedTextKit(
+                            isRepeatingAnimation: true,
+                            animatedTexts: [
+                              TypewriterAnimatedText(
+                                'WOW YOUR WALLET',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Curves.ease,
                               ),
-                            ),
-                            SizedBox(
-                              width: 500.0,
-                              child: DefaultTextStyle(
-                                maxLines: 1,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 42,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w800,
-                                  height: 0,
-                                  letterSpacing: -0.3,
-                                ),
-                                child: AnimatedTextKit(
-                                  isRepeatingAnimation: true,
-                                  animatedTexts: [
-                                    TypewriterAnimatedText(
-                                      'WOW YOUR WALLET',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Curves.ease,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'Data-Driven Perspective',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Curves.ease,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'We are in the END (Reach) game',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Curves.ease,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'Turning your "Ows!" to "WOWs!"',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'We Make \'SOLD\' Happen!',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'Not all Heroes wear Capes, some do Sales!',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'Smoothen your Rush Hours',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Easing.legacy,
-                                    ),
-                                    TypewriterAnimatedText(
-                                      'Wow Your Dead Hours',
-                                      speed: const Duration(milliseconds: 250),
-                                      curve: Curves.ease,
-                                    ),
-                                  ],
-                                ),
+                              TypewriterAnimatedText(
+                                'Data-Driven Perspective',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Curves.ease,
                               ),
-                            )
-                          ],
+                              TypewriterAnimatedText(
+                                'We are in the END (Reach) game',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Curves.ease,
+                              ),
+                              TypewriterAnimatedText(
+                                'Turning your "Ows!" to "WOWs!"',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Easing.legacy,
+                              ),
+                              TypewriterAnimatedText(
+                                'We Make \'SOLD\' Happen!',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Easing.legacy,
+                              ),
+                              TypewriterAnimatedText(
+                                'Not all Heroes wear Capes, some do Sales!',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Easing.legacy,
+                              ),
+                              TypewriterAnimatedText(
+                                'Smoothen your Rush Hours',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Easing.legacy,
+                              ),
+                              TypewriterAnimatedText(
+                                'Wow Your Dead Hours',
+                                speed: const Duration(milliseconds: 250),
+                                curve: Curves.ease,
+                              ),
+                            ],
+                          ),
                         )),
                     const SizedBox(
                       height: 10,

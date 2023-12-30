@@ -30,10 +30,10 @@ class WordLogo extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           children: [
-            _buildTextSpan('O', 128),
-            _buildTextSpan(' W', 64),
             _buildTextSpan('O', 96),
-            _buildTextSpan('W !', 128),
+            _buildTextSpan(' W', 48),
+            _buildTextSpan('O', 96),
+            _buildTextSpan('W !', 96),
           ],
         ),
       ),

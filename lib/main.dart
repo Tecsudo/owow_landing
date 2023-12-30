@@ -4,7 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'core/config/theme/theme.dart';
+import 'config/theme/theme.dart';
 import 'core/constant/ui_constant.dart';
 import 'src/view/home/home_main.dart';
 
