@@ -177,7 +177,6 @@ class PageStart extends StatelessWidget {
                     fontSize: 16,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w600,
-                    height: 0,
                   ),
                 )),
           ),

@@ -66,7 +66,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 32,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w800,
-                      height: 0,
                     ),
                   ),
                 ],
@@ -90,7 +89,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                   const TextSpan(
@@ -104,7 +102,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                   const TextSpan(
@@ -117,7 +114,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                   const TextSpan(
@@ -130,7 +126,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                   const TextSpan(
@@ -144,7 +139,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                   const TextSpan(
@@ -159,7 +153,6 @@ class AboutUs extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                 ],
@@ -171,7 +164,6 @@ class AboutUs extends StatelessWidget {
                 fontSize: 18,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w500,
-                height: 0,
               ),
             ),
           ),
@@ -184,7 +176,7 @@ class AboutUs extends StatelessWidget {
 _rightLayout(BuildContext context, Size screenSize) {
   return SizedBox(
     // width: screenSize.width * .3,
-    height: screenSize.height * .75,
+    height: 650,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -238,8 +230,8 @@ class MidShadowBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: context.isDisplayLargeThanTablet ? 250 : 200,
-      height: context.isDisplayLargeThanTablet ? 300 : 250,
+      width: context.isDisplayLargeThanTablet ? 230 : 200,
+      height: context.isDisplayLargeThanTablet ? 280 : 250,
       padding: const EdgeInsets.symmetric(horizontal: SizeConstant.p20),
       decoration: ShapeDecoration(
         color: const Color(0xFFF6F6F6),
@@ -274,12 +266,11 @@ class MidShadowBox extends StatelessWidget {
               text,
               maxLines: 2,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: context.displayMedium!.copyWith(
                 color: Colors.black,
-                fontSize: 24,
+                fontSize: 20,
                 fontFamily: 'Poppins',
-                fontWeight: FontWeight.w700,
-                height: 0,
+                fontWeight: FontWeight.w800,
               ),
             ),
           ],

@@ -165,22 +165,8 @@ class _HomeMainState extends State<HomeMain> {
   List<Widget> get _bodyItems => [
         PageStart(screenSize: screenSize),
         AboutUs(screenSize: screenSize),
-        Stack(children: [
-          // Container(
-          //   width: screenSize.width,
-          //   height: screenSize.height * 2.5,
-          //   decoration: BoxDecoration(
-          //     image: DecorationImage(
-          //       image: AssetImage('${Config.imagePath}/mid.png'),
-          //       fit: BoxFit.fill,
-          //     ),
-          //   ),
-          // ),
-          Align(
-              alignment: Alignment.center,
-              child: Services(screenSize: screenSize))
-        ]),
-        // CaseStudy(screenSize: screenSize),
+        Services(screenSize: screenSize),
+        CaseStudy(screenSize: screenSize),
         ContactUs(screenSize: screenSize),
         Career(screenSize: screenSize),
       ];

@@ -84,7 +84,6 @@ class Services extends StatelessWidget {
                 fontSize: 32,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w800,
-                height: 0,
               ),
             ),
           ),
@@ -105,7 +104,6 @@ class Services extends StatelessWidget {
                     fontSize: 18,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
-                    height: 0,
                   ),
                 ),
                 TextSpan(
@@ -115,7 +113,6 @@ class Services extends StatelessWidget {
                     fontSize: 18,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
-                    height: 0,
                   ),
                 ),
                 TextSpan(
@@ -125,7 +122,6 @@ class Services extends StatelessWidget {
                     fontSize: 18,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
-                    height: 0,
                   ),
                 ),
                 const TextSpan(
@@ -138,7 +134,6 @@ class Services extends StatelessWidget {
                     fontSize: 18,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
-                    height: 0,
                   ),
                 ),
                 const TextSpan(
@@ -151,7 +146,6 @@ class Services extends StatelessWidget {
                     fontSize: 18,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
-                    height: 0,
                   ),
                 ),
               ],
@@ -161,7 +155,6 @@ class Services extends StatelessWidget {
               fontSize: 18,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,
-              height: 0,
             ),
           ),
         ),
@@ -238,7 +231,6 @@ class Services extends StatelessWidget {
                   fontSize: 26,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w800,
-                  height: 0,
                 ),
 
                 // const TextStyle(

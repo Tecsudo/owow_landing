@@ -15,7 +15,6 @@ class WordLogo extends StatelessWidget {
         fontSize: fontSize,
         fontFamily: 'Poppins',
         fontWeight: FontWeight.w600,
-        height: 0,
       ),
     );
   }
@@ -23,7 +22,6 @@ class WordLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-
       child: Text.rich(
         TextSpan(
           children: [

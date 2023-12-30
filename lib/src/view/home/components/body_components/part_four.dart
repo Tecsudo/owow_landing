@@ -198,7 +198,6 @@ class _ContactUsState extends State<ContactUs> {
                     fontSize: 16,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w600,
-                    height: 0,
                   ),
                 )),
           )
@@ -210,7 +209,7 @@ class _ContactUsState extends State<ContactUs> {
   Widget _leftLayout(BuildContext context) {
     return const Center(
       child: Text(
-        'GET IN TOUCH',
+        'Let\'s Connect?',
         style: TextStyle(
           color: Color(0xFFFF8E49),
           fontSize: 36,

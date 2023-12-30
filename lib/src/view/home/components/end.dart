@@ -39,7 +39,6 @@ class Career extends StatelessWidget {
                             fontSize: 28,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w800,
-                            height: 0,
                           ),
                         ),
                       ),
@@ -55,7 +54,6 @@ class Career extends StatelessWidget {
                               fontSize: 24,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
-                              height: 0,
                             ),
                             child: AnimatedTextKit(
                               isRepeatingAnimation: true,
@@ -87,7 +85,6 @@ class Career extends StatelessWidget {
                               fontSize: 24,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
-                              height: 0,
                             ),
                           ),
                           TextButton(
@@ -107,7 +104,6 @@ class Career extends StatelessWidget {
                                 fontSize: 24,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w700,
-                                height: 0,
                               ),
                             ),
                             onPressed: () {},
