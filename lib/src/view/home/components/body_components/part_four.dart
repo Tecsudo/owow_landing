@@ -207,16 +207,28 @@ class _ContactUsState extends State<ContactUs> {
   }
 
   Widget _leftLayout(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Let\'s Connect?',
-        style: TextStyle(
-          color: Color(0xFFFF8E49),
-          fontSize: 36,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w700,
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Let\'s Connect?',
+          style: TextStyle(
+            color: Color(0xFFFF8E49),
+            fontSize: 36,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w700,
+          ),
         ),
-      ),
+        Text(
+          '{Book a demo ... }',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ],
     );
   }
 }

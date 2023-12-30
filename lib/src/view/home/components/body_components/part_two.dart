@@ -23,6 +23,7 @@ class Services extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _topLayout(context),
+            GapConstant.h64,
             _lowerLayout(context),
           ],
         ),
@@ -38,7 +39,7 @@ class Services extends StatelessWidget {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: SizedBox(
-          height: 550,
+          height: 450,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -167,19 +168,19 @@ class Services extends StatelessWidget {
       required List<Color> gradientColors,
       required BuildContext context}) {
     return SizedBox(
-      width: 400,
-      height: 450,
+      width: 300,
+      height: 400,
       child: Stack(
         children: [
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              width: 350,
+              width: 270,
               height: 300,
               decoration: ShapeDecoration(
                 color: const Color(0xFFF6F6F6),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(51),
+                  borderRadius: BorderRadius.circular(SizeConstant.p40),
                 ),
                 shadows: const [
                   BoxShadow(
@@ -195,8 +196,8 @@ class Services extends StatelessWidget {
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              width: 280,
-              height: 310,
+              width: 220,
+              height: 250,
               decoration: ShapeDecoration(
                 gradient: LinearGradient(
                   begin: const Alignment(0.71, 0.70),
@@ -204,7 +205,7 @@ class Services extends StatelessWidget {
                   colors: gradientColors,
                 ),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(51),
+                  borderRadius: BorderRadius.circular(SizeConstant.p40),
                 ),
                 shadows: const [
                   BoxShadow(
@@ -224,7 +225,7 @@ class Services extends StatelessWidget {
               width: 270,
               child: Text(
                 text,
-                textAlign: TextAlign.right,
+                textAlign: TextAlign.center,
                 style: context.headlineSmall!.copyWith(
                   color: Colors.black,
                   // color: const Color(0xFFFF8E49),
@@ -232,13 +233,6 @@ class Services extends StatelessWidget {
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w800,
                 ),
-
-                // const TextStyle(
-                //   color: Colors.white,
-                //   fontSize: 30,
-                //   fontFamily: 'Poppins',
-                //   fontWeight: FontWeight.w700,
-                // ),
               ),
             ),
           ),
