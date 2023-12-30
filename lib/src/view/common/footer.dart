@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:owow/core/constant/gap_constant.dart';
+import 'package:owow/core/constant/size_constant.dart';
+import 'package:owow/src/view/common/background.dart';
 
 import '../../../core/widget/word_logo.dart';
 
@@ -14,25 +17,21 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
         alignment: Alignment.bottomCenter,
-        child: SizedBox(
-          width: screenSize.width,
-          height: screenSize.height,
+        child: HomeBackground(
           child: Column(
             children: [
               const Spacer(),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: WordLogo(
-                  screenSize: screenSize,
                   logoColor: Colors.white,
-                  // logoColor: const Color(0xFFFF8E49),
                 ),
               ),
               Center(
                 child: Container(
-                  width: screenSize.width * .5,
-                  margin: EdgeInsets.symmetric(
-                    vertical: screenSize.height * .03,
+                  width: 500,
+                  margin: const EdgeInsets.symmetric(
+                    vertical: SizeConstant.p24,
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,9 +102,9 @@ class Footer extends StatelessWidget {
               ),
               Center(
                 child: Container(
-                    width: screenSize.width * .2,
-                    margin: EdgeInsets.symmetric(
-                      vertical: screenSize.height * .03,
+                    width: 300,
+                    margin: const EdgeInsets.symmetric(
+                      vertical: SizeConstant.p24,
                     ),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -128,9 +127,7 @@ class Footer extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(
-                height: screenSize.height * .01,
-              )
+              GapConstant.h20,
             ],
           ),
         ));
