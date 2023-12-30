@@ -1,9 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:owow/core/constant/size_constant.dart';
 import 'package:owow/core/extensions/build_context_extension.dart';
 import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:owow/src/view/common/background.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/constant/ui_constant.dart';
 import '../../common/footer.dart';
@@ -22,55 +24,54 @@ class Career extends StatelessWidget {
         children: [
           _footerBG(context),
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.topCenter,
             child: HomeBackground(
               child: Container(
-                  height: 250,
-                  width: 500,
+                  height: 200,
+                  // width: 500,
                   margin: const EdgeInsets.symmetric(
-                      horizontal: SizeConstant.p20, vertical: SizeConstant.p40),
+                      horizontal: SizeConstant.p20, vertical: SizeConstant.p20),
+                  padding: const EdgeInsets.only(left: 500),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Center(
-                        child: Text(
-                          'Still here? Let\'s get to know you!',
-                          style: context.displayMedium!.copyWith(
-                            color: const Color(0xFFFF8E49),
-                            fontSize: 28,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w800,
-                          ),
+                      Text(
+                        'Still here? Let\'s get to know you!',
+                        style: context.displayMedium!.copyWith(
+                          color: const Color(0xFFFF8E49),
+                          fontSize: 28,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
-                      Center(
-                        child: Container(
-                          // margin: EdgeInsets.only(left: screenSize.width * .05),
-                          width: 500,
-                          child: DefaultTextStyle(
-                            maxLines: 1,
-                            textAlign: TextAlign.right,
-                            style: context.displayMedium!.copyWith(
-                              color: Colors.black,
-                              fontSize: 24,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w600,
-                            ),
-                            child: AnimatedTextKit(
-                              isRepeatingAnimation: true,
-                              animatedTexts: [
-                                TypewriterAnimatedText(
-                                  'At “O WoW!”, we\'re more than just a workplace.',
-                                  speed: const Duration(milliseconds: 150),
-                                  curve: Curves.ease,
-                                  // curve: Easing.legacy,
-                                ),
-                                TypewriterAnimatedText(
-                                  'Join us in creating meaningful connections and memorable experiences for people worldwide.',
-                                  speed: const Duration(milliseconds: 140),
-                                  curve: Curves.decelerate,
-                                ),
-                              ],
-                            ),
+                      SizedBox(
+                        // margin: EdgeInsets.only(left: screenSize.width * .05),
+                        width: 700,
+                        height: 100,
+                        child: DefaultTextStyle(
+                          maxLines: 1,
+                          textAlign: TextAlign.right,
+                          style: context.displayMedium!.copyWith(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w600,
+                          ),
+                          child: AnimatedTextKit(
+                            isRepeatingAnimation: true,
+                            animatedTexts: [
+                              TypewriterAnimatedText(
+                                'At “O WoW!”, we\'re more than just a workplace.',
+                                speed: const Duration(milliseconds: 150),
+                                curve: Curves.ease,
+                                // curve: Easing.legacy,
+                              ),
+                              TypewriterAnimatedText(
+                                'Join us in creating meaningful connections and memorable experiences for people worldwide.',
+                                speed: const Duration(milliseconds: 140),
+                                curve: Curves.decelerate,
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -100,13 +101,14 @@ class Career extends StatelessWidget {
                             child: Text(
                               'Now!',
                               style: context.displayMedium!.copyWith(
-                                color: Color(0xFFFF8E49),
+                                color: const Color(0xFFFF8E49),
                                 fontSize: 24,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () =>
+                                _launchMailClient('haad1111997@gmail.com'),
                           )
                         ],
                       ),
@@ -118,6 +120,15 @@ class Career extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _launchMailClient(String kEmail) async {
+    final mailUrl = Uri(path: 'mailto:$kEmail');
+    try {
+      await launchUrl(mailUrl);
+    } catch (e) {
+      await Clipboard.setData(ClipboardData(text: '$kEmail'));
+    }
   }
 
   Widget _footerBG(BuildContext context) {

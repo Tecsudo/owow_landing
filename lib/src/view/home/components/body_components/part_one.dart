@@ -85,7 +85,7 @@ class AboutUs extends StatelessWidget {
                   TextSpan(
                     text: 'cutting-edge SaaS solution ',
                     style: context.displayMedium!.copyWith(
-                      color: Colors.black,
+                      color: const Color(0xFFFF8E49),
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
@@ -98,7 +98,7 @@ class AboutUs extends StatelessWidget {
                   TextSpan(
                     text: 'success story is crafted with precision, ',
                     style: context.displayMedium!.copyWith(
-                      color: Colors.black,
+                      color: const Color(0xFFFF8E49),
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
@@ -110,7 +110,7 @@ class AboutUs extends StatelessWidget {
                   TextSpan(
                     text: 'Deep Understanding of ',
                     style: context.displayMedium!.copyWith(
-                      color: Colors.black,
+                      color: const Color(0xFFFF8E49),
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
@@ -122,7 +122,7 @@ class AboutUs extends StatelessWidget {
                   TextSpan(
                     text: 'Customer\'s Behavior. ',
                     style: context.displayMedium!.copyWith(
-                      color: Colors.black,
+                      color: const Color(0xFFFF8E49),
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
@@ -135,7 +135,7 @@ class AboutUs extends StatelessWidget {
                   TextSpan(
                     text: 'It\'s more than feedback; ',
                     style: context.displayMedium!.copyWith(
-                      color: Colors.black,
+                      color: const Color(0xFFFF8E49),
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
@@ -149,7 +149,7 @@ class AboutUs extends StatelessWidget {
                     text:
                         'fueled by insight, innovation, and unparalleled brand experience.',
                     style: context.displayMedium!.copyWith(
-                      color: Colors.black,
+                      color: const Color(0xFFFF8E49),
                       fontSize: 18,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
