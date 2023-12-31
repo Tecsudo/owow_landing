@@ -6,6 +6,7 @@ import 'package:responsive_framework/max_width_box.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../../../core/constant/gap_constant.dart';
+import '../../../../core/util/launch_url.dart';
 import '../../common/toolbar_text_widget.dart';
 
 import '../layouts/about_us_layout.dart';
@@ -101,8 +102,14 @@ class _HomePageState extends State<HomePage> {
       _ToolbarItem(text: 'Case Studies', onTap: () => _changeToIndex(3)),
       _ToolbarItem(text: 'Contact Us', onTap: () => _changeToIndex(4)),
       _ToolbarItem(text: 'Careers', onTap: () => _changeToIndex(5)),
-      _ToolbarItem(text: 'GR Generator', onTap: () {}),
+      _ToolbarItem(
+          text: 'GR Generator',
+          onTap: () => _launchUrl('https://owowapp.tecsudo.com/#/welcome')),
     ];
+  }
+
+  void _launchUrl(String url) {
+    LaunchUtil.launchWeb(url);
   }
 
   void _changeToIndex(int i) {
