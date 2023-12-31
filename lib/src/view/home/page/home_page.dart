@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
       _ToolbarItem(text: 'Careers', onTap: () => _changeToIndex(5)),
       _ToolbarItem(
           text: 'GR Generator',
-          onTap: () => _launchUrl('https://owowapp.tecsudo.com/#/welcome')),
+          onTap: () => _launchUrl('https://owowapp.tecsudo.com/')),
     ];
   }
 
