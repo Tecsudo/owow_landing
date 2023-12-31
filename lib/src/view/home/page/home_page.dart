@@ -5,23 +5,24 @@ import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:responsive_framework/max_width_box.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import '../../../core/constant/gap_constant.dart';
-import '../common/toolbar_text_widget.dart';
-import 'components/body_components/part_four.dart';
-import 'components/body_components/part_one.dart';
-import 'components/body_components/part_three.dart';
-import 'components/body_components/part_two.dart';
-import 'components/end.dart';
-import 'components/top.dart';
+import '../../../../core/constant/gap_constant.dart';
+import '../../common/toolbar_text_widget.dart';
 
-class HomeMain extends StatefulWidget {
-  const HomeMain({super.key});
+import '../layouts/about_us_layout.dart';
+import '../layouts/career_layout.dart';
+import '../layouts/case_study_layout.dart';
+import '../layouts/contact_us_layout.dart';
+import '../layouts/header_layout.dart';
+import '../layouts/services_layout.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HomeMain> createState() => _HomeMainState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeMainState extends State<HomeMain> {
+class _HomePageState extends State<HomePage> {
   final ItemScrollController _itemScrollController = ItemScrollController();
 
   Size screenSize = Config.screenSize;
@@ -118,41 +119,6 @@ class _HomeMainState extends State<HomeMain> {
       items: _generateToolbarItem(),
     );
   }
-  // Widget _body(BuildContext context) {
-  //   return SizedBox(
-  //     width: context.isDisplayLargeThanTablet ? 1920 : screenSize.width,
-  //     // height: context.isDisplayLargeThanTablet ? 720 : screenSize.height,
-  //     child: ListView(
-  //       scrollDirection: Axis.vertical,
-  //       shrinkWrap: true,
-  //       children: [
-  //         PageStart(
-  //           // aboutUsKey: aboutUsKey,
-  //           // servicesKey: servicesKey,
-  //           // caseStudyKey: caseStudyKey,
-  //           // contactUsKey: contactUsKey,
-  //           // homeKey: homeKey,
-  //           // careerKey: careerKey,
-  //           // scrollController: scrollController,
-  //           screenSize: screenSize,
-  //         ),
-  //         PageBody(
-  //           aboutUsKey: aboutUsKey,
-  //           servicesKey: servicesKey,
-  //           caseStudyKey: caseStudyKey,
-  //           contactUsKey: contactUsKey,
-  //           screenSize: screenSize,
-  //           scrollController: scrollController,
-  //         ),
-  //         // PageEnding(
-  //         //   careerKey: careerKey,
-  //         //   screenSize: screenSize,
-  //         //   scrollController: scrollController,
-  //         // ),
-  //       ],
-  //     ),
-  //   );
-  // }
 
   Widget _body(BuildContext context) {
     return ScrollablePositionedList.builder(
@@ -163,12 +129,12 @@ class _HomeMainState extends State<HomeMain> {
   }
 
   List<Widget> get _bodyItems => [
-        PageStart(screenSize: screenSize),
-        AboutUs(screenSize: screenSize),
-        Services(screenSize: screenSize),
-        CaseStudy(screenSize: screenSize),
-        ContactUs(screenSize: screenSize),
-        Career(screenSize: screenSize),
+        HomeHeaderLayout(screenSize: screenSize),
+        AboutUsLayout(screenSize: screenSize),
+        ServicesLayout(screenSize: screenSize),
+        const CaseStudyLayout(),
+        ContactUsLayout(screenSize: screenSize),
+        CareerLayout(screenSize: screenSize),
       ];
 }
 

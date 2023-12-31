@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:owow/core/constant/gap_constant.dart';
 import 'package:owow/core/constant/size_constant.dart';
 import 'package:owow/src/view/common/background.dart';
+import 'package:owow/src/view/common/toolbar_text_widget.dart';
 
 import '../../../core/widget/word_logo.dart';
 
@@ -36,55 +37,30 @@ class Footer extends StatelessWidget {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
-                        'Work',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                        ),
+                      ToolbarTextWidget(
+                        text: 'About Us',
+                        color: Colors.black,
+                        onTap: null,
                       ),
-                      Text(
-                        'Services',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                        ),
+                      ToolbarTextWidget(
+                        text: 'Services',
+                        color: Colors.black,
+                        onTap: null,
                       ),
-                      Text(
-                        'News',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                        ),
+                      ToolbarTextWidget(
+                        color: Colors.black,
+                        text: 'Case Studies',
+                        onTap: null,
                       ),
-                      Text(
-                        'Culture',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                        ),
+                      ToolbarTextWidget(
+                        color: Colors.black,
+                        text: 'Contact Us',
+                        onTap: null,
                       ),
-                      Text(
-                        'Offices',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                        ),
+                      ToolbarTextWidget(
+                        color: Colors.black,
+                        text: 'Careers',
+                        onTap: null,
                       ),
                     ],
                   ),

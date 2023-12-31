@@ -1,45 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:owow/core/constant/size_constant.dart';
 import 'package:owow/core/extensions/build_context_extension.dart';
+import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:owow/src/view/common/background.dart';
-import 'package:owow/src/view/home/case_study_datails.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
-class CaseStudy extends StatelessWidget {
-  const CaseStudy({
+import '../page/case_study_details_page.dart';
+
+class CaseStudyLayout extends StatelessWidget {
+  const CaseStudyLayout({
     super.key,
-    required this.screenSize,
   });
-
-  final Size screenSize;
 
   @override
   Widget build(BuildContext context) {
     return HomeBackground(
+      child: ResponsiveRowColumn(
+        columnMainAxisAlignment: MainAxisAlignment.start,
+        columnSpacing: 32,
+        rowMainAxisAlignment: MainAxisAlignment.start,
+        layout: context.isDisplayLargeThanTablet
+            ? ResponsiveRowColumnType.ROW
+            : ResponsiveRowColumnType.COLUMN,
+        children: [
+          ResponsiveRowColumnItem(
+            rowFlex: 4,
+            columnOrder: 1,
+            child: _leftLayout(context),
+          ),
+          ResponsiveRowColumnItem(
+            rowFlex: 6,
+            columnOrder: 2,
+            child: _rightLayout(context),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _leftLayout(BuildContext context) {
+    return Align(
+      alignment: Alignment.topRight,
+      child: Container(
+        margin: const EdgeInsets.only(
+          bottom: SizeConstant.p56,
+          left: SizeConstant.p56,
+        ),
+        child: Align(
+          alignment: context.isDisplayLargeThanTablet
+              ? Alignment.topRight
+              : Alignment.center,
+          child: Text(
+            'Case Studies',
+            style: context.displayLarge!.copyWith(
+              fontWeight: FontWeight.w700,
+              // fontSize: 32,
+              color: const Color(0xFFFF8E49),
+              fontFamily: 'Poppins',
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _rightLayout(BuildContext context) {
+    return const SizedBox(
+      width: 500,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            // height: screenSize.height * .4,
-            margin: const EdgeInsets.only(
-              top: SizeConstant.p56,
-              left: SizeConstant.p56,
-            ),
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: Text(
-                'Case Studies',
-                style: context.displayLarge!.copyWith(
-                  fontWeight: FontWeight.w700,
-                  // fontSize: 32,
-                  color: const Color(0xFFFF8E49),
-                  fontFamily: 'Poppins',
-                ),
-              ),
-            ),
-          ),
-          const Spacer(),
-          const SizedBox(
+          SizedBox(
             height: 700,
             child: Column(
               children: [
@@ -55,7 +87,7 @@ class CaseStudy extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 830,
             child: Column(
               children: [
@@ -101,9 +133,9 @@ class EndContentShapes extends StatelessWidget {
         );
       },
       child: Container(
-          margin: const EdgeInsets.all(10),
-          width: 270,
-          height: 300,
+          margin: const EdgeInsets.all(SizeConstant.p8),
+          width: 220,
+          height: 260,
           decoration: ShapeDecoration(
             gradient: LinearGradient(
               begin: const Alignment(0.71, 0.70),
@@ -111,7 +143,7 @@ class EndContentShapes extends StatelessWidget {
               colors: gradientColors,
             ),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(51),
+              borderRadius: BorderRadius.circular(SizeConstant.p40),
             ),
             shadows: const [
               BoxShadow(
@@ -125,8 +157,8 @@ class EndContentShapes extends StatelessWidget {
           child: Container(
             margin: const EdgeInsets.all(SizeConstant.p20),
             padding: const EdgeInsets.symmetric(horizontal: SizeConstant.p24),
-            width: 270,
-            height: 300,
+            width: 220,
+            height: 260,
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
