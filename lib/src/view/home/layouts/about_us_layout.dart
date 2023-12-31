@@ -7,10 +7,10 @@ import 'package:responsive_framework/responsive_row_column.dart';
 
 import '../../../../../core/constant/size_constant.dart';
 import '../../../../../core/constant/ui_constant.dart';
-import '../../../common/background.dart';
+import '../../common/background.dart';
 
-class AboutUs extends StatelessWidget {
-  const AboutUs({
+class AboutUsLayout extends StatelessWidget {
+  const AboutUsLayout({
     super.key,
     required this.screenSize,
   });

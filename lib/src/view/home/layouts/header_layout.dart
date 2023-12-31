@@ -9,8 +9,8 @@ import '../../../../core/constant/ui_constant.dart';
 import '../../../../core/widget/word_logo.dart';
 import '../../common/background.dart';
 
-class PageStart extends StatelessWidget {
-  const PageStart({super.key, required this.screenSize});
+class HomeHeaderLayout extends StatelessWidget {
+  const HomeHeaderLayout({super.key, required this.screenSize});
 
   final Size screenSize;
 

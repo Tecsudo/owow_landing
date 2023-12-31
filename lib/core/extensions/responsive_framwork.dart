@@ -3,8 +3,8 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 extension XResponsiveBuildContext on BuildContext {
   bool get isDisplayLargeThanTablet =>
-      ResponsiveBreakpoints.of(this).largerThan(TABLET);
-  
+      ResponsiveBreakpoints.of(this).largerThan('LARGE_TABLET');
+
   bool get isDisplayLargeThanDesktop =>
       ResponsiveBreakpoints.of(this).largerThan(DESKTOP);
 }

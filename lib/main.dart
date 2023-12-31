@@ -6,7 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import 'config/theme/theme.dart';
 import 'core/constant/ui_constant.dart';
-import 'src/view/home/home_main.dart';
+import 'src/view/home/page/home_page.dart';
 
 void main() {
   const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
@@ -44,7 +44,8 @@ class MyApp extends StatelessWidget {
           const Breakpoint(start: 0, end: 360, name: 'SMALL_MOBILE'),
           const Breakpoint(start: 361, end: 450, name: MOBILE),
           const Breakpoint(start: 451, end: 800, name: TABLET),
-          const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+          const Breakpoint(start: 801, end: 930, name: 'LARGE_TABLET'),
+          const Breakpoint(start: 931, end: 1920, name: DESKTOP),
           const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
         ],
       ),
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const HomeMain(),
+      home: const HomePage(),
     );
   }
 }

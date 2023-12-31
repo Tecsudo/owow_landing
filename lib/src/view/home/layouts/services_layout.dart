@@ -4,10 +4,10 @@ import 'package:owow/core/extensions/build_context_extension.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/constant/size_constant.dart';
-import '../../../common/background.dart';
+import '../../common/background.dart';
 
-class Services extends StatelessWidget {
-  const Services({
+class ServicesLayout extends StatelessWidget {
+  const ServicesLayout({
     super.key,
     required this.screenSize,
   });
