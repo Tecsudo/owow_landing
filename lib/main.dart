@@ -2,10 +2,11 @@ import 'dart:developer';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:owow/core/constant/ui_constant.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
-import 'core/config/theme/theme.dart';
-import 'src/view/home/home_main.dart';
+import 'config/theme/theme.dart';
+import 'core/constant/ui_constant.dart';
+import 'src/view/home/page/home_page.dart';
 
 void main() {
   const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
@@ -13,10 +14,8 @@ void main() {
   Config.releaseMode = kReleaseMode;
   if (kReleaseMode) {
     Config.imagePath = 'assets/images';
-    // Config.workingFontPath = Config.prodFontPath;
   } else {
     Config.imagePath = 'assets/images';
-    // Config.workingFontPath = Config.devFontPath;
   }
 
   runApp(const MyApp());
@@ -39,11 +38,22 @@ class MyApp extends StatelessWidget {
           PointerDeviceKind.unknown
         },
       ),
+      builder: (context, child) => ResponsiveBreakpoints.builder(
+        child: child!,
+        breakpoints: [
+          const Breakpoint(start: 0, end: 360, name: 'SMALL_MOBILE'),
+          const Breakpoint(start: 361, end: 450, name: MOBILE),
+          const Breakpoint(start: 451, end: 800, name: TABLET),
+          const Breakpoint(start: 801, end: 930, name: 'LARGE_TABLET'),
+          const Breakpoint(start: 931, end: 1920, name: DESKTOP),
+          const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
+        ],
+      ),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const HomeMain(),
+      home: const HomePage(),
     );
   }
 }
