@@ -7,6 +7,8 @@ import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:owow/src/view/common/background.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../../../provider/contact_us.dart';
+
 class ContactUsLayout extends StatefulWidget {
   const ContactUsLayout({
     super.key,
@@ -21,19 +23,19 @@ class ContactUsLayout extends StatefulWidget {
 class _ContactUsLayoutState extends State<ContactUsLayout> {
   final _formKey = GlobalKey<FormState>();
 
-  final nameController = TextEditingController();
-  final companyController = TextEditingController();
-  final emailController = TextEditingController();
-  final phoneController = TextEditingController();
-  final detailsController = TextEditingController();
+  final _nameController = TextEditingController();
+  final _companyController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _detailsController = TextEditingController();
 
   @override
   void dispose() {
-    nameController.dispose();
-    companyController.dispose();
-    emailController.dispose();
-    phoneController.dispose();
-    detailsController.dispose();
+    _nameController.dispose();
+    _companyController.dispose();
+    _emailController.dispose();
+    _phoneController.dispose();
+    _detailsController.dispose();
     super.dispose();
   }
 
@@ -92,7 +94,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: SizeConstant.p12),
                     child: CustomTextFormField(
-                      controller: nameController,
+                      controller: _nameController,
                       hintText: 'Name',
                       screenSize: widget.screenSize,
                       onChanged: (value) {
@@ -114,7 +116,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: SizeConstant.p12),
                     child: CustomTextFormField(
-                      controller: companyController,
+                      controller: _companyController,
                       hintText: 'Company',
                       screenSize: widget.screenSize,
                       onChanged: (value) {
@@ -149,7 +151,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: SizeConstant.p12),
                     child: CustomTextFormField(
-                      controller: emailController,
+                      controller: _emailController,
                       hintText: 'Email',
                       screenSize: widget.screenSize,
                       onChanged: (value) {
@@ -171,7 +173,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: SizeConstant.p12),
                     child: CustomTextFormField(
-                      controller: phoneController,
+                      controller: _phoneController,
                       hintText: 'Phone',
                       screenSize: widget.screenSize,
                       onChanged: (value) {
@@ -197,7 +199,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: SizeConstant.p12),
               child: CustomTextFormField(
-                controller: detailsController,
+                controller: _detailsController,
                 screenSize: widget.screenSize,
                 expands: true,
                 maxLines: null,
@@ -235,8 +237,20 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                 ),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Processing Data')));
+                    contactUsForm(
+                            name: _nameController.text,
+                            email: _emailController.text,
+                            company: _companyController.text,
+                            phone: _phoneController.text,
+                            details: _detailsController.text)
+                        .then((value) {
+                      log(value);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Data Saved')));
+                    });
+                    // ScaffoldMessenger.of(context).showSnackBar(
+                    //     const SnackBar(content: Text('Processing Data')));
+                    // Here, you would usually send the data to the server or elsewhere
                   }
                 },
                 child: const Text(
