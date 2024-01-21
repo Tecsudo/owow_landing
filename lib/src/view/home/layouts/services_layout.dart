@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:owow/core/constant/gap_constant.dart';
 import 'package:owow/core/extensions/build_context_extension.dart';
+import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/constant/size_constant.dart';
+import '../../../../core/constant/ui_constant.dart';
 import '../../common/background.dart';
 
 class ServicesLayout extends StatelessWidget {
@@ -16,16 +18,44 @@ class ServicesLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeBackground(
-      child: SizedBox(
+    return SizedBox(
+      width: 1920,
+      height: 800,
+      child: Stack(
+        children: [
+          _topBG(context),
+          Align(
+            alignment: Alignment.topCenter,
+            child: HomeBackground(
+              child: SizedBox(
+                height: 800,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _topLayout(context),
+                    GapConstant.h64,
+                    _lowerLayout(context),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _topBG(BuildContext context) {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        width: context.isDisplayLargeThanTablet ? 1920 : 900,
         height: 800,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _topLayout(context),
-            GapConstant.h64,
-            _lowerLayout(context),
-          ],
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('${Config.imagePath}/mid_b_one.png'),
+            fit: context.isDisplayLargeThanTablet ? BoxFit.fill : BoxFit.fill,
+          ),
         ),
       ),
     );
