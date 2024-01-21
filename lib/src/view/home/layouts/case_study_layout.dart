@@ -5,6 +5,7 @@ import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:owow/src/view/common/background.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../../../../core/constant/ui_constant.dart';
 import '../page/case_study_details_page.dart';
 
 class CaseStudyLayout extends StatelessWidget {
@@ -14,26 +15,54 @@ class CaseStudyLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeBackground(
-      child: ResponsiveRowColumn(
-        columnMainAxisAlignment: MainAxisAlignment.start,
-        columnSpacing: 32,
-        rowMainAxisAlignment: MainAxisAlignment.start,
-        layout: context.isDisplayLargeThanTablet
-            ? ResponsiveRowColumnType.ROW
-            : ResponsiveRowColumnType.COLUMN,
+    return SizedBox(
+      width: 1920,
+      height: context.isDisplayLargeThanTablet ? 800 : 1000,
+      child: Stack(
         children: [
-          ResponsiveRowColumnItem(
-            rowFlex: 4,
-            columnOrder: 1,
-            child: _leftLayout(context),
-          ),
-          ResponsiveRowColumnItem(
-            rowFlex: 6,
-            columnOrder: 2,
-            child: _rightLayout(context),
+          _topBG(context),
+          Align(
+            alignment: Alignment.topCenter,
+            child: HomeBackground(
+              child: ResponsiveRowColumn(
+                columnMainAxisAlignment: MainAxisAlignment.start,
+                columnSpacing: 32,
+                rowMainAxisAlignment: MainAxisAlignment.start,
+                layout: context.isDisplayLargeThanTablet
+                    ? ResponsiveRowColumnType.ROW
+                    : ResponsiveRowColumnType.COLUMN,
+                children: [
+                  ResponsiveRowColumnItem(
+                    rowFlex: 4,
+                    columnOrder: 1,
+                    child: _leftLayout(context),
+                  ),
+                  ResponsiveRowColumnItem(
+                    rowFlex: 6,
+                    columnOrder: 2,
+                    child: _rightLayout(context),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _topBG(BuildContext context) {
+    return Align(
+      alignment: Alignment.topCenter,
+      child: Container(
+        width: context.isDisplayLargeThanTablet ? 1920 : 900,
+        height: context.isDisplayLargeThanTablet ? 800 : 1000,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('${Config.imagePath}/mid_b_two.png'),
+            fit: context.isDisplayLargeThanTablet ? BoxFit.fill : BoxFit.fill,
+          ),
+        ),
       ),
     );
   }
