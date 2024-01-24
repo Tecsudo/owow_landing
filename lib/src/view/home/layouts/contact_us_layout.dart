@@ -245,6 +245,11 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                             details: _detailsController.text)
                         .then((value) {
                       log(value);
+                      _nameController.clear();
+                      _emailController.clear();
+                      _companyController.clear();
+                      _phoneController.clear();
+                      _detailsController.clear();
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Data Saved')));
                     });
