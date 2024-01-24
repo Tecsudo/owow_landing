@@ -10,7 +10,7 @@ Future<String> contactUsForm({
   required String phone,
   required String details,
 }) async {
-  var url = Uri.parse('http://faraz369.pythonanywhere.com/api/information/');
+  var url = Uri.parse('https://faraz369.pythonanywhere.com/api/information/');
   var headers = {
     'Content-Type': 'application/json',
   };
