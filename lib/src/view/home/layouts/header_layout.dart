@@ -185,3 +185,5 @@ class HomeHeaderLayout extends StatelessWidget {
     );
   }
 }
+
+//check the responsive framework
