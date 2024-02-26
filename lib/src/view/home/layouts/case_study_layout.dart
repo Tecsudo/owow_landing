@@ -17,7 +17,7 @@ class CaseStudyLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 1920,
-      height: context.isDisplayLargeThanTablet ? 800 : 1000,
+      height: context.isDisplayLargeThanTablet ? 800 : 1200,
       child: Stack(
         children: [
           _topBG(context),
@@ -94,9 +94,64 @@ class CaseStudyLayout extends StatelessWidget {
   }
 
   Widget _rightLayout(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       width: 500,
-      child: Row(
+      child: ResponsiveRowColumn(
+        columnMainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        columnSpacing: 0,
+        rowMainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        layout: context.isDisplayLargeThanTablet
+            ? ResponsiveRowColumnType.ROW
+            : ResponsiveRowColumnType.COLUMN,
+        children: [
+          ResponsiveRowColumnItem(
+            rowFlex: 2,
+            columnOrder: 1,
+            child: SizedBox(
+              height: context.isDisplayLargeThanTablet ? 700 : 395,
+              child: const Column(
+                children: [
+                  EndContentShapes(
+                    gradientColors: [Color(0xFF4074BA), Color(0xFF5EA3D9)],
+                    text:
+                        'The O Wow Effect: A Case Study on Boosting Revenue and Loyalty through Intent-Based Promotions.',
+                  ),
+                  EndContentShapes(
+                    gradientColors: [Color(0xFFED7B23), Color(0xFFF4AE2C)],
+                    text: 'Navigating Customer’s Loyalty in Fashion and Style.',
+                  ),
+                ],
+              ),
+            ),
+          ),
+          ResponsiveRowColumnItem(
+            rowFlex: 2,
+            columnOrder: 2,
+            child: SizedBox(
+              height: context.isDisplayLargeThanTablet ? 830 : 395,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: context.isDisplayLargeThanTablet ? 120 : 0,
+                  ),
+                  const EndContentShapes(
+                    gradientColors: [Color(0xFFD33D54), Color(0xFFDB6777)],
+                    text:
+                        'Revive & Thrive: O WOW\'s Solution to Restaurant Slow Times/O WOW\'s Blueprint for Conquering Restaurant Downtime.',
+                  ),
+                  const EndContentShapes(
+                    gradientColors: [Color(0xFF0AB89D), Color(0xFF3DC0B5)],
+                    text:
+                        'O WOW\'s Vision for Consistent Wellness Revenue/O WOW\'s Path to Boosted Revenue and Client Bonds.',
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+
+/*       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -137,7 +192,7 @@ class CaseStudyLayout extends StatelessWidget {
             ),
           ),
         ],
-      ),
+      ), */
     );
   }
 }
@@ -163,8 +218,8 @@ class EndContentShapes extends StatelessWidget {
       },
       child: Container(
           margin: const EdgeInsets.all(SizeConstant.p8),
-          width: 220,
-          height: 260,
+          width: context.isDisplayLargeThanTablet ? 220 : 250,
+          height: context.isDisplayLargeThanTablet ? 260 : 180,
           decoration: ShapeDecoration(
             gradient: LinearGradient(
               begin: const Alignment(0.71, 0.70),
@@ -186,8 +241,8 @@ class EndContentShapes extends StatelessWidget {
           child: Container(
             margin: const EdgeInsets.all(SizeConstant.p20),
             padding: const EdgeInsets.symmetric(horizontal: SizeConstant.p24),
-            width: 220,
-            height: 260,
+            width: context.isDisplayLargeThanTablet ? 220 : 250,
+            height: context.isDisplayLargeThanTablet ? 260 : 180,
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(

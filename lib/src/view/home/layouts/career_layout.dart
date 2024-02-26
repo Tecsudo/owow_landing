@@ -25,14 +25,23 @@ class CareerLayout extends StatelessWidget {
           _footerBG(context),
           Footer(screenSize: screenSize),
           Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.topRight,
             child: HomeBackground(
               child: Container(
                   height: 300,
-                  margin: const EdgeInsets.symmetric(
-                      horizontal: SizeConstant.p20, vertical: SizeConstant.p20),
+                  margin: EdgeInsets.only(
+                      top: SizeConstant.p20,
+                      bottom: context.isDisplaySmallerThanMobile
+                          ? SizeConstant.p56
+                          : SizeConstant.p20,
+                      right: SizeConstant.p20,
+                      left: SizeConstant.p20),
                   padding: EdgeInsets.only(
-                      left: context.isDisplayLargeThanTablet ? 500 : 0),
+                    left: context.isDisplayLargeThanTablet ? 500 : 0,
+                    bottom: context.isDisplaySmallerThanMobile
+                        ? SizeConstant.p56
+                        : 0,
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

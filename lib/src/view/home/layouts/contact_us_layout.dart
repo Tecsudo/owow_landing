@@ -312,6 +312,9 @@ class CustomTextFormField extends StatelessWidget {
     this.expands = false,
     this.maxLines = 1,
     required this.screenSize,
+    this.contentPadding =
+        const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+    this.borderRadius = const BorderRadius.all(Radius.circular(15.0)),
   });
   final String hintText;
   final FormFieldValidator<String> validator;
@@ -322,6 +325,8 @@ class CustomTextFormField extends StatelessWidget {
   final bool expands;
   final int? maxLines;
   final Function(String)? onChanged;
+  final EdgeInsetsGeometry contentPadding;
+  final BorderRadius borderRadius;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -333,8 +338,7 @@ class CustomTextFormField extends StatelessWidget {
       maxLines: maxLines,
       onChanged: onChanged,
       decoration: InputDecoration(
-        contentPadding:
-            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+        contentPadding: contentPadding,
         hintText: hintText,
         hintStyle: Theme.of(context).textTheme.labelLarge,
         enabledBorder: const OutlineInputBorder(
@@ -349,19 +353,19 @@ class CustomTextFormField extends StatelessWidget {
           color: Colors.red,
           fontSize: 16,
         ),
-        errorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
             color: Colors.red,
             width: 2,
           ),
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+          borderRadius: borderRadius,
         ),
-        focusedErrorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
             color: Colors.red,
             width: 3,
           ),
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+          borderRadius: borderRadius,
         ),
       ),
     );
