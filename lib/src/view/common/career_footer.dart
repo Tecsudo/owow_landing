@@ -31,8 +31,8 @@ class Footer extends StatelessWidget {
               Center(
                 child: Container(
                   width: 500,
-                  margin: const EdgeInsets.only(
-                    top: SizeConstant.p24,
+                  margin: const EdgeInsets.symmetric(
+                    vertical: SizeConstant.p24,
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -66,16 +66,16 @@ class Footer extends StatelessWidget {
                   ),
                 ),
               ),
-              // const Text(
-              //   'Privacy Notice & Terms of Service',
-              //   textAlign: TextAlign.center,
-              //   style: TextStyle(
-              //     color: Colors.black,
-              //     fontSize: 14,
-              //     fontFamily: 'Poppins',
-              //     fontWeight: FontWeight.w700,
-              //   ),
-              // ),
+              const Text(
+                'Privacy Notice & Terms of Service',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
               Center(
                 child: Container(
                     width: 300,
