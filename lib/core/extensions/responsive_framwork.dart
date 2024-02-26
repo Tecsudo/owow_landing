@@ -7,9 +7,6 @@ extension XResponsiveBuildContext on BuildContext {
 
   bool get isDisplayLargeThanDesktop =>
       ResponsiveBreakpoints.of(this).largerThan(DESKTOP);
-
-  bool get isDisplaySmallerThanMobile =>
-      ResponsiveBreakpoints.of(this).smallerOrEqualTo(MOBILE);
 }
 
 extension XResponsiveFontSize on BuildContext {
