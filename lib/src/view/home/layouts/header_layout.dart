@@ -171,7 +171,7 @@ class HomeHeaderLayout extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(Icons.arrow_forward_ios_rounded),
                 label: const Text(
-                  'Continue',
+                  'Enter',
                   style: TextStyle(
                     color: Color(0xFFFF9148),
                     fontSize: 16,
