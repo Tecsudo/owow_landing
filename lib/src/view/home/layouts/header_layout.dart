@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:owow/core/constant/gap_constant.dart';
@@ -5,14 +7,29 @@ import 'package:owow/core/extensions/build_context_extension.dart';
 import 'package:owow/core/extensions/responsive_framwork.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../../../../core/constant/size_constant.dart';
 import '../../../../core/constant/ui_constant.dart';
 import '../../../../core/widget/word_logo.dart';
 import '../../common/background.dart';
+import 'contact_us_layout.dart';
 
-class HomeHeaderLayout extends StatelessWidget {
+class HomeHeaderLayout extends StatefulWidget {
   const HomeHeaderLayout({super.key, required this.screenSize});
 
   final Size screenSize;
+
+  @override
+  State<HomeHeaderLayout> createState() => _HomeHeaderLayoutState();
+}
+
+class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
+  final _codeController = TextEditingController();
+
+  @override
+  void dispose() {
+    _codeController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -154,31 +171,63 @@ class HomeHeaderLayout extends StatelessWidget {
             minHeight: context.isDisplayLargeThanTablet ? 50 : 50,
             minWidth: context.isDisplayLargeThanTablet ? 200 : 250,
           ),
-          child: Align(
-            alignment: context.isDisplayLargeThanTablet
-                ? Alignment.topLeft
-                : Alignment.center,
-            child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  surfaceTintColor: Colors.white,
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  shadowColor: Colors.black.withOpacity(.3),
-                  elevation: 4,
-                ),
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_forward_ios_rounded),
-                label: const Text(
-                  'Enter',
-                  style: TextStyle(
-                    color: Color(0xFFFF9148),
-                    fontSize: 16,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w600,
+          child: ResponsiveRowColumn(
+            columnMainAxisAlignment: MainAxisAlignment.start,
+            columnSpacing: 32,
+            rowMainAxisAlignment: MainAxisAlignment.center,
+            layout: context.isDisplayLargeThanTablet
+                ? ResponsiveRowColumnType.ROW
+                : ResponsiveRowColumnType.ROW,
+            children: [
+              ResponsiveRowColumnItem(
+                rowFlex: 5,
+                columnOrder: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: SizeConstant.p12, vertical: SizeConstant.p12),
+                  child: CustomTextFormField(
+                    borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+                    controller: _codeController,
+                    hintText: 'Code',
+                    screenSize: widget.screenSize,
+                    onChanged: (value) {
+                      log(value, name: 'Form | Code');
+                    },
+                    validator: (String? value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter your Code';
+                      }
+                      return null;
+                    },
                   ),
-                )),
+                ),
+              ),
+              ResponsiveRowColumnItem(
+                rowFlex: 4,
+                columnOrder: 1,
+                child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      surfaceTintColor: Colors.white,
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      shadowColor: Colors.black.withOpacity(.3),
+                      elevation: 4,
+                    ),
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_forward_ios_rounded),
+                    label: const Text(
+                      'Enter',
+                      style: TextStyle(
+                        color: Color(0xFFFF9148),
+                        fontSize: 16,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w600,
+                      ),
+                    )),
+              ),
+            ],
           ),
         )
       ],
