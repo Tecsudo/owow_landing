@@ -223,8 +223,6 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
               maxWidth: 250,
               maxHeight: 50,
             ),
-            // width: 250,
-            // height: 50,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   surfaceTintColor: const Color(0xFFE09405),
@@ -253,9 +251,6 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Data Saved')));
                     });
-                    // ScaffoldMessenger.of(context).showSnackBar(
-                    //     const SnackBar(content: Text('Processing Data')));
-                    // Here, you would usually send the data to the server or elsewhere
                   }
                 },
                 child: const Text(

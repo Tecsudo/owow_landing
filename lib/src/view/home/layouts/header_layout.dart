@@ -234,3 +234,5 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
     );
   }
 }
+
+//check the responsive framework
