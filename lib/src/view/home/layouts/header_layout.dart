@@ -166,8 +166,8 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
         GapConstant.h12,
         ConstrainedBox(
           constraints: BoxConstraints(
-            maxHeight: context.isDisplayLargeThanTablet ? 50 : 60,
-            maxWidth: context.isDisplayLargeThanTablet ? 250 : 300,
+            maxHeight: context.isDisplayLargeThanTablet ? 70 : 60,
+            maxWidth: context.isDisplayLargeThanTablet ? 300 : 300,
             minHeight: context.isDisplayLargeThanTablet ? 50 : 50,
             minWidth: context.isDisplayLargeThanTablet ? 200 : 250,
           ),
@@ -180,7 +180,7 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
                 : ResponsiveRowColumnType.ROW,
             children: [
               ResponsiveRowColumnItem(
-                rowFlex: 5,
+                rowFlex: 4,
                 columnOrder: 2,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
