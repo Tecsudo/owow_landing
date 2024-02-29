@@ -306,6 +306,14 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.expands = false,
     this.maxLines = 1,
+    this.enabledBorderColor = const Color(0xFFFF9148),
+    this.enabledBorderWidth = 2,
+    this.focusedBorderColor = const Color(0xFFFF9148),
+    this.focusedBorderWidth = 3,
+    this.errorBorderColor = Colors.red,
+    this.errorBorderWidth = 2,
+    this.focusedErrorBorderColor = Colors.red,
+    this.focusedErrorBorderWidth = 3,
     required this.screenSize,
     this.contentPadding =
         const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -322,6 +330,15 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String)? onChanged;
   final EdgeInsetsGeometry contentPadding;
   final BorderRadius borderRadius;
+  final double enabledBorderWidth;
+  final double focusedBorderWidth;
+  final double errorBorderWidth;
+  final double focusedErrorBorderWidth;
+  final Color enabledBorderColor;
+  final Color focusedBorderColor;
+  final Color errorBorderColor;
+  final Color focusedErrorBorderColor;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -336,32 +353,23 @@ class CustomTextFormField extends StatelessWidget {
         contentPadding: contentPadding,
         hintText: hintText,
         hintStyle: Theme.of(context).textTheme.labelLarge,
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFFF9148), width: 2.0),
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFFF9148), width: 3.0),
-          borderRadius: BorderRadius.all(Radius.circular(15.0)),
-        ),
-        errorStyle: const TextStyle(
-          color: Colors.red,
-          fontSize: 16,
-        ),
+        enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+                color: enabledBorderColor, width: enabledBorderWidth),
+            borderRadius: borderRadius),
+        focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+                color: focusedBorderColor, width: focusedBorderWidth),
+            borderRadius: borderRadius),
+        errorStyle: const TextStyle(color: Colors.red, fontSize: 16),
         errorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 2,
-          ),
-          borderRadius: borderRadius,
-        ),
+            borderSide:
+                BorderSide(color: errorBorderColor, width: errorBorderWidth),
+            borderRadius: borderRadius),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.red,
-            width: 3,
-          ),
-          borderRadius: borderRadius,
-        ),
+            borderSide: BorderSide(
+                color: focusedErrorBorderColor, width: focusedErrorBorderWidth),
+            borderRadius: borderRadius),
       ),
     );
   }

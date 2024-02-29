@@ -166,9 +166,9 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
         GapConstant.h12,
         ConstrainedBox(
           constraints: BoxConstraints(
-            maxHeight: context.isDisplayLargeThanTablet ? 70 : 60,
-            maxWidth: context.isDisplayLargeThanTablet ? 300 : 300,
-            minHeight: context.isDisplayLargeThanTablet ? 50 : 50,
+            maxHeight: context.isDisplayLargeThanTablet ? 60 : 60,
+            maxWidth: context.isDisplayLargeThanTablet ? 250 : 300,
+            minHeight: context.isDisplayLargeThanTablet ? 50 : 60,
             minWidth: context.isDisplayLargeThanTablet ? 200 : 250,
           ),
           child: ResponsiveRowColumn(
@@ -189,6 +189,8 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
                     borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                     controller: _codeController,
                     hintText: 'Code',
+                    focusedBorderColor: Colors.white,
+                    enabledBorderColor: Colors.white,
                     screenSize: widget.screenSize,
                     onChanged: (value) {
                       log(value, name: 'Form | Code');
