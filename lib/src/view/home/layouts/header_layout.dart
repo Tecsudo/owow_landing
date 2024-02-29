@@ -189,8 +189,8 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
                     borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                     controller: _codeController,
                     hintText: 'Code',
-                    focusedBorderColor: Colors.white,
-                    enabledBorderColor: Colors.white,
+                    enabledBorderColor: Colors.yellow,
+                    focusedBorderWidth: 2,
                     screenSize: widget.screenSize,
                     onChanged: (value) {
                       log(value, name: 'Form | Code');
