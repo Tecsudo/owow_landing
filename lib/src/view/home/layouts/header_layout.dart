@@ -184,14 +184,14 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
                 columnOrder: 2,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: SizeConstant.p12, vertical: SizeConstant.p16),
+                      horizontal: SizeConstant.p12, vertical: SizeConstant.p12),
                   child: CustomTextFormField(
                     borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                     controller: _codeController,
                     hintText: 'Code',
                     enabledBorderColor: Colors.black,
                     enabledBorderWidth: 1,
-                    focusedBorderColor: Colors.black,
+                    focusedBorderColor: Colors.white,
                     focusedBorderWidth: 2,
                     focusedErrorBorderWidth: 1,
                     errorBorderWidth: 1,
@@ -205,6 +205,10 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
                       }
                       return null;
                     },
+                    hintStyle: Theme.of(context)
+                        .textTheme
+                        .labelLarge!
+                        .copyWith(color: Colors.white),
                   ),
                 ),
               ),

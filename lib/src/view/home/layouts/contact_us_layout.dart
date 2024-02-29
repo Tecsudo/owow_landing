@@ -106,6 +106,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                         }
                         return null;
                       },
+                      hintStyle: Theme.of(context).textTheme.labelLarge!,
                     ),
                   ),
                 ),
@@ -128,6 +129,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                         }
                         return null;
                       },
+                      hintStyle: Theme.of(context).textTheme.labelLarge!,
                     ),
                   ),
                 ),
@@ -163,6 +165,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                         }
                         return null;
                       },
+                      hintStyle: Theme.of(context).textTheme.labelLarge!,
                     ),
                   ),
                 ),
@@ -185,6 +188,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                         }
                         return null;
                       },
+                      hintStyle: Theme.of(context).textTheme.labelLarge!,
                     ),
                   ),
                 ),
@@ -214,6 +218,7 @@ class _ContactUsLayoutState extends State<ContactUsLayout> {
                   }
                   return null;
                 },
+                hintStyle: Theme.of(context).textTheme.labelLarge!,
               ),
             ),
           ),
@@ -318,6 +323,7 @@ class CustomTextFormField extends StatelessWidget {
     this.contentPadding =
         const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
     this.borderRadius = const BorderRadius.all(Radius.circular(15.0)),
+    required this.hintStyle,
   });
   final String hintText;
   final FormFieldValidator<String> validator;
@@ -330,6 +336,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String)? onChanged;
   final EdgeInsetsGeometry contentPadding;
   final BorderRadius borderRadius;
+  final TextStyle hintStyle;
   final double enabledBorderWidth;
   final double focusedBorderWidth;
   final double errorBorderWidth;
@@ -352,7 +359,7 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         contentPadding: contentPadding,
         hintText: hintText,
-        hintStyle: Theme.of(context).textTheme.labelLarge,
+        hintStyle: hintStyle,
         enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
                 color: enabledBorderColor, width: enabledBorderWidth),
