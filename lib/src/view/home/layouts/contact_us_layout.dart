@@ -324,6 +324,7 @@ class CustomTextFormField extends StatelessWidget {
         const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
     this.borderRadius = const BorderRadius.all(Radius.circular(15.0)),
     required this.hintStyle,
+
   });
   final String hintText;
   final FormFieldValidator<String> validator;
@@ -357,7 +358,8 @@ class CustomTextFormField extends StatelessWidget {
       maxLines: maxLines,
       onChanged: onChanged,
       decoration: InputDecoration(
-        contentPadding: contentPadding,
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
         hintText: hintText,
         hintStyle: hintStyle,
         enabledBorder: OutlineInputBorder(
@@ -377,6 +379,7 @@ class CustomTextFormField extends StatelessWidget {
             borderSide: BorderSide(
                 color: focusedErrorBorderColor, width: focusedErrorBorderWidth),
             borderRadius: borderRadius),
+
       ),
     );
   }
