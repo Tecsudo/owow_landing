@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:owow/core/constant/size_constant.dart';
 import 'package:owow/core/constant/ui_constant.dart';
 import 'package:owow/core/extensions/responsive_framwork.dart';
-import 'package:responsive_framework/max_width_box.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../../../core/constant/gap_constant.dart';
