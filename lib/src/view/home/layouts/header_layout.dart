@@ -184,15 +184,15 @@ class _HomeHeaderLayoutState extends State<HomeHeaderLayout> {
                 columnOrder: 2,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: SizeConstant.p12, vertical: SizeConstant.p12),
+                      horizontal: SizeConstant.p12, vertical: SizeConstant.p16),
                   child: CustomTextFormField(
                     borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                     controller: _codeController,
                     hintText: 'Code',
-                    enabledBorderColor: Colors.white,
+                    enabledBorderColor: Colors.black,
                     enabledBorderWidth: 1,
-                    focusedBorderColor: Colors.white,
-                    focusedBorderWidth: 1,
+                    focusedBorderColor: Colors.black,
+                    focusedBorderWidth: 2,
                     focusedErrorBorderWidth: 1,
                     errorBorderWidth: 1,
                     screenSize: widget.screenSize,
