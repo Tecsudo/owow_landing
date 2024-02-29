@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:owow/core/constant/gap_constant.dart';
 import 'package:owow/core/extensions/build_context_extension.dart';
 import 'package:owow/core/extensions/responsive_framwork.dart';
-
-import 'package:responsive_framework/responsive_row_column.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/constant/size_constant.dart';
 import '../../../../../core/constant/ui_constant.dart';

@@ -38,11 +38,10 @@ dependencies:
   animated_custom_dropdown: ^2.0.0
   adaptive_navbar: ^0.0.3
   get: ^4.6.6
-  responsive_framework: ^1.1.1
+  responsive_framework: ^1.4.0
   scrollable_positioned_list: ^0.3.8
   url_launcher: ^6.2.2
   http: ^1.2.0
-  # auto_route: ^7.8.4
 
 dev_dependencies:
   flutter_test:
